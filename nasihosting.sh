@@ -23,7 +23,7 @@ echo " [6] Edit virtualhost                                            ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " [7] Exit                                                        ";
 echo "=================================================================";
-read -p " Masukkan Nomor Pilihan Anda antara [1 - 6] : " choice;
+read -p " Masukkan Nomor Pilihan Anda antara [1 - 7] : " choice;
 echo "";
 case $choice in
 
