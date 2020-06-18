@@ -52,7 +52,7 @@ case $choice in
     sudo mkfs.ext4 /mnt/$img
     sudo mount -o loop /mnt/$img /var/www/html/$namasubdomain
     sudo nano /etc/fstab
-    sudo cp /var/www/html/gudang/* /var/www/html/$namasubdomain
+    sudo cp /home/gudang/* /var/www/html/$namasubdomain
     sudo chmod -R 777 /var/www/html/$namasubdomain  
     sudo chown -r www-data.www-data /var/www/html/$namasubdomain  
     else
