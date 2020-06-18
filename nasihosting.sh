@@ -64,7 +64,7 @@ case $choice in
     read namasubdomain
     if [ -z "$(ls -A /var/www/html/$namasubdomain/*)" ]; then
     echo "Installasi virtualhost dengan domain"
-    sudo cp support/domain.conf /etc/apache2/sites-available/$namasubdomain.conf
+    sudo cp support/subdomain.conf /etc/apache2/sites-available/$namasubdomain.conf
     sudo nano /etc/apache2/sites-available/$namasubdomain.conf
     sudo a2ensite $namasubdomain.conf
     sudo service apache2 reload
