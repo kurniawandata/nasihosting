@@ -7,7 +7,7 @@ while [[ $again == 'Y' ]] || [[ $again == 'y' ]];
 do
 clear
 echo "=================================================================";
-echo " Nasihosting for X-code (Ubuntu 16.04) -Beta 1                   ";
+echo " Nasihosting for X-code (Ubuntu server) - Beta 1                   ";
 echo " Progammer : Kurniawan. xcode.or.id                              ";
 echo " Version 1.0.0 - 19/10/2020                                      ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
