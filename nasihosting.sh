@@ -15,13 +15,13 @@ echo " Instalasi                                                       ";
 echo " [1] Lihat daftar file img                                       ";
 echo " [2] Buat folder untuk client hosting                            ";
 echo " [3] Buat file img, edit /etc/fstab/, mount dan salin data       ";
-echo " [3] Edit file /etc/fstab                                        ";
+echo " [4] Edit file /etc/fstab                                        ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Virtual host                                                    ";
-echo " [4] Buat virtuahost                                             ";
-echo " [5] Edit virtualhost                                            ";
+echo " [5] Buat virtuahost                                             ";
+echo " [6] Edit virtualhost                                            ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
-echo " [6] Exit                                                        ";
+echo " [7] Exit                                                        ";
 echo "=================================================================";
 read -p " Masukkan Nomor Pilihan Anda antara [1 - 6] : " choice;
 echo "";
@@ -60,7 +60,9 @@ case $choice in
     fi
     ;;   
 
-4)  echo -n "Masukkan alamat sub domain : "
+4)  sudo nano /etc/fstab
+    ;;
+5)  echo -n "Masukkan alamat sub domain : "
     read namasubdomain
     if [ -z "$(ls -A /var/www/html/$namasubdomain/*)" ]; then
     echo "Installasi virtualhost dengan domain"
@@ -72,7 +74,8 @@ case $choice in
     echo "Sub domain yang anda masukkan sudah ada"
     fi
     ;;   
-5)  echo -n "Masukkan alamat domain / subdomain : "
+    
+6)  echo -n "Masukkan alamat domain / subdomain : "
     read namasubdomain
     if [ -z "$(ls -A /etc/apache2/sites-available/$namasubdomain.conf)" ]; then
     sudo nano /etc/apache2/sites-available/$namasubdomain.conf
@@ -81,7 +84,7 @@ case $choice in
     fi
     ;;
 
-6) exit
+7) exit
     ;;
 *)    echo "Maaf, menu tidak ada"
 esac
