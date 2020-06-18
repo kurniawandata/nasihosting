@@ -91,7 +91,7 @@ case $choice in
 *)    echo "Maaf, menu tidak ada"
 esac
 echo ""
-echo "Nasihosting for X-code (Ubuntu 16.04) Beta 1"
+echo "Nasihosting for X-code (Ubuntu Server) Beta 1"
 echo "Oleh Kurniawan - trainingxcode@gmail.com. xcode.or.id"
 echo ""
 echo -n "Kembali ke menu? [y/n]: ";
