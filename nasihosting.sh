@@ -40,7 +40,7 @@ case $choice in
     fi
     ;;   
 
-3)  sudo -ls -l /mnt/
+3)  sudo ls -l /mnt/*
     echo -n "Masukkan nama file img : "
     read img
     echo -n "Masukkan nama sub domain : "
