@@ -7,6 +7,10 @@ File manager
 ------------
 File manager bisa dicari di google, diletakkan pada /home/gudang
 
+Keterangan
+----------
+Untuk membangun hosting tidak cukup dengan script ini, masih ada berbagai pengamanan server yang harus dilakukan dan itu dibahas di X-code Training ( http://xcode.or.id/professional )
+
 LICENSI
 ------- 
 GNU General Public License 
