@@ -52,9 +52,11 @@ case $choice in
     sudo mkfs.ext4 /mnt/$img
     sudo mount -o loop /mnt/$img /var/www/html/$namasubdomain
     sudo nano /etc/fstab
+    sudo rm /var/www/html/$namasubdomain/*
     sudo cp /home/gudang/* /var/www/html/$namasubdomain
     sudo chmod -R 777 /var/www/html/$namasubdomain  
     sudo chown -r www-data.www-data /var/www/html/$namasubdomain  
+    sudo chown www-data.data -R /var/wwww/html/$namasubdomain
     else
     echo "File img yang anda masukkan sudah ada"
     fi
