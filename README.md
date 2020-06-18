@@ -3,6 +3,10 @@ Nasihosting
 -----------
 Script untuk mendukung otomatisasi membuat akun hosting gratis
 
+File manager
+------------
+File manager bisa dicari di google, diletakkan pada /home/gudang
+
 LICENSI
 ------- 
 GNU General Public License 
