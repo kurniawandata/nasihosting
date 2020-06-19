@@ -25,6 +25,12 @@ Keterangan
 4. Di virtualhost ganti sample dengan melakukan find dan replace all dengan nama sub domain yang akan dibuat
 5. Untuk membangun hosting tidak cukup dengan script ini, masih ada berbagai pengamanan server yang harus dilakukan dan itu hanya dibahas di X-code Training ( http://xcode.or.id/professional )
 
+Script ini telah diimplementasi
+-------------------------------
+Anda bisa mengakses nasihosting di https://nasihosting.com
+
+
+
 LICENSI
 ------- 
 GNU General Public License 
