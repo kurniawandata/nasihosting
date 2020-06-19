@@ -7,6 +7,14 @@ File manager
 ------------
 File manager bisa dicari di google, diletakkan pada /home/gudang
 
+Cara menggunakan
+----------------
+1. Buat folder di /home/gudang dan isi file manager di situ, jangan lupa index dikunci jika hosting beolum diamankan dari setting server
+2. git clone https://github.com/kurniawandata/nasihosting
+3. cd nasihosting
+4. chmod -R 777 *
+5. ./nasihosting.sh
+
 Keterangan
 ----------
 1. Di script ini default-nya membuat file ekstensi img 10 MB jika ingin mengubah, bisa edit scriptnya 
