@@ -55,7 +55,7 @@ case $choice in
     sudo rmdir /var/www/html/$namasubdomain/lost+found
     sudo cp /home/gudang/* /var/www/html/$namasubdomain
     sudo chmod -R 777 /var/www/html/$namasubdomain  
-    sudo chown -r www-data.www-data /var/www/html/$namasubdomain  
+    sudo chown www-data.www-data /var/www/html/$namasubdomain  
     sudo chown www-data.www-data -R /var/www/html/$namasubdomain
     else
     echo "File img yang anda masukkan sudah ada"
