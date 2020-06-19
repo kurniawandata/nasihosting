@@ -7,13 +7,13 @@ while [[ $again == 'Y' ]] || [[ $again == 'y' ]];
 do
 clear
 echo "=================================================================";
-echo " Nasihosting for X-code (Ubuntu server) - Beta 1                   ";
+echo " Nasihosting for X-code (Ubuntu server) - Beta 1                 ";
 echo " Progammer : Kurniawan. xcode.or.id                              ";
 echo " Version 1.0.0 - 19/10/2020                                      ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Instalasi                                                       ";
 echo " [1] Lihat daftar file img                                       ";
-echo " [2] Buat folder untuk client hosting                            ";
+echo " [2] Cek folder untuk client hosting                             ";
 echo " [3] Buat file img, edit /etc/fstab/, mount dan salin data       ";
 echo " [4] Edit file /etc/fstab                                        ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
@@ -33,11 +33,9 @@ case $choice in
 2)  echo -n "Masukkan nama sub domain "
     read namasubdomain
     if [ -z "$(ls -A /var/www/html/$namasubdomain/*)" ]; then
-    echo "Buat folder.."
-    sudo mkdir -p /var/www/html/$namasubdomain
+    echo "folder untuk sub domain belum ada"
     else
-    echo "Domain yang anda masukkan sudah ada"
-    fi
+    echo "Sub domain sudah ada"
     ;;   
 
 3)  sudo ls -l /mnt/*
