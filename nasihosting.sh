@@ -7,12 +7,12 @@ while [[ $again == 'Y' ]] || [[ $again == 'y' ]];
 do
 clear
 echo "=================================================================";
-echo " Nasihosting for X-code - Ubuntu server 16.04 - Beta 7           ";
+echo " Nasihosting for X-code - Ubuntu server 16.04 - Beta 9           ";
 echo " Progammer : Kurniawan. xcode.or.id                              ";
 echo " Version 1.0.0 - 20/06/2020                                      ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Instalasi                                                       ";
-echo " [1]  Aktifkan /home pada /etc/apache2/apache2.conf              ";
+echo " [1]  Aktifkan /home pada /etc/apache2/apache2.conf dan lainnya  ";
 echo " [2]  Lihat daftar file img                                      ";
 echo " [3]  Cek folder untuk client hosting                            ";
 echo " [4]  Buat file img, mount, edit /etc/fstab/                     ";
@@ -41,6 +41,7 @@ case $choice in
     sudo cp /etc/apache2/apache2.conf backup
     sudo cp support/apache2.conf /etc/apache2/
     service apache2 restart
+    sudo apt-get install zip unzip php-zip
     ;;
 2)  sudo ls -l /mnt/
     ;;
