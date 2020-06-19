@@ -31,6 +31,7 @@ case $choice in
 1)  echo "Aktifkan /home.."
     sudo cp /etc/apache2/apache2.conf backup
     sudo cp support/apache2.conf /etc/apache2/
+    service apache2 restart
     ;;
 2)  sudo ls -l /mnt/
     ;;
