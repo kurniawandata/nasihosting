@@ -7,24 +7,33 @@ while [[ $again == 'Y' ]] || [[ $again == 'y' ]];
 do
 clear
 echo "=================================================================";
-echo " Nasihosting for X-code (Ubuntu server 16.04) - Beta 3           ";
+echo " Nasihosting for X-code - Ubuntu server 16.04 - Beta 7           ";
 echo " Progammer : Kurniawan. xcode.or.id                              ";
-echo " Version 1.0.0 - 19/06/2020                                      ";
+echo " Version 1.0.0 - 20/06/2020                                      ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Instalasi                                                       ";
-echo " [1] Aktifkan /home pada /etc/apache2/apache2.conf               ";
-echo " [2] Lihat daftar file img                                       ";
-echo " [3] Cek folder untuk client hosting                             ";
-echo " [4] Buat file img, edit /etc/fstab/, mount dan salin data       ";
-echo " [5] Edit file /etc/fstab                                        ";
+echo " [1]  Aktifkan /home pada /etc/apache2/apache2.conf              ";
+echo " [2]  Lihat daftar file img                                      ";
+echo " [3]  Cek folder untuk client hosting                            ";
+echo " [4]  Buat file img, mount, edit /etc/fstab/                     ";
+echo " [5]  Cek isi folder client hosting                              ";
+echo " [6]  Salin file manager pada folder untuk client hosting        ";
+echo " [7]  Edit file /etc/fstab                                       ";
+echo " [8]  Cek mount                                                  ";
+echo " [9]  Umount, hapus file img, edit /etc/fstab                    ";
+echo " [10] Hapus data file img                                       ";
+echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
+echo " Aktifkan pengamanan dari remote shell PHP Shell                 ";
+echo " [11] Amankan dari PHP Shell                                     ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Virtual host                                                    ";
-echo " [6] Buat virtuahost                                             ";
-echo " [7] Edit virtualhost                                            ";
+echo " [12] Buat virtualhost                                           ";
+echo " [13] Hapus virtualhost                                          ";
+echo " [14] Edit virtualhost                                           ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
-echo " [8] Exit                                                        ";
+echo " [15] Exit                                                       ";
 echo "=================================================================";
-read -p " Masukkan Nomor Pilihan Anda antara [1 - 8] : " choice;
+read -p " Masukkan Nomor Pilihan Anda antara [1 - 15] : " choice;
 echo "";
 case $choice in
 
@@ -46,7 +55,7 @@ case $choice in
     ;;   
 
 4)  sudo ls -l /mnt/*
-    echo -n "Masukkan nama file img (Jangan lupa tambahkan ekstensi img, misal akun1.img) : "
+    echo -n "Masukkan nama file img - Jangan lupa tambahkan ekstensi img, misal akun1.img : "
     read img
     echo -n "Masukkan nama sub domain : "
     read namasubdomain
@@ -57,46 +66,123 @@ case $choice in
     sudo mkfs.ext4 /mnt/$img
     sudo mount -o loop /mnt/$img /home/$namasubdomain
     sudo nano /etc/fstab
+    else
+    echo "File img sudah ada"
+    fi
+    ;;   
+
+5)  echo -n "Masukkan alamat domain / subdomain : "
+    read namasubdomain
+    if [ -z "$(ls -A /home/$namasubdomain/*)" ]; then
+    echo "Anda belum buat folder dengan nama sub domain tersebut"
+    else
+    sudo ls -l /home/$namasubdomain/
+    fi
+    ;;
+
+6)  echo -n "Masukkan alamat domain / subdomain : "
+    read namasubdomain
+    if [ -z "$(ls -A /home/$namasubdomain/*)" ]; then
     sudo rmdir /home/$namasubdomain/lost+found
     sudo cp /home/gudang/* /home/$namasubdomain
     sudo chmod -R 777 /home/$namasubdomain  
     sudo chown www-data.www-data /home/$namasubdomain  
     sudo chown www-data.www-data -R /home/$namasubdomain/*
     else
-    echo "File img yang anda masukkan sudah ada"
+    echo "Anda belum buat folder dengan nama sub domain tersebut"
     fi
-    ;;   
-
-5)  sudo nano /etc/fstab
     ;;
-6)  echo -n "Masukkan alamat sub domain : "
+  
+7)  sudo nano /etc/fstab
+    ;;
+
+8)  sudo mount
+    ;;
+
+9)  sudo ls -l /mnt/*
+    echo -n "Masukkan nama file img - Jangan lupa tambahkan ekstensi img, misal akun1.img : "
+    read img
+    echo -n "Masukkan nama sub domain : "
     read namasubdomain
-    if [ -z "$(ls -A /home/$namasubdomain/*)" ]; then
-    echo "Sub domain yang anda masukkan sudah ada"
+    if [ -z "$(ls -A /mnt/$img)" ]; then
+    echo "File img tidak ada"
     else
+    echo "umount pada file img.."
+    sudo umount /mnt/$img
+    sudo nano /etc/fstab    
+    fi
+    ;;
+
+10) read -p "Apakah anda yakin akan menghapus file img client ? y/n :" -n 1 -r
+    echo  ""
+    if [[ ! $REPLY =~ ^[Nn]$ ]]
+    then
+    sudo ls -l /mnt
+    echo -n "Masukkan nama file img  - Jangan lupa tambahkan ekstensi img, misal akun1.img : "
+    read img
+    if [ -z "$(ls -l /mnt/$img)" ]; then
+    echo "Tidak ada file img tersebut"
+    else
+    sudo rm /mnt/$img
+    echo "File img sudah dihapus"
+    fi
+    fi
+    ;;
+
+11) read -p "Apakah anda yakin menggunakan apache server dengan ubuntu server 16.04 - PHP 7.0? y/n :" -n 1 -r
+    echo  ""
+    if [[ ! $REPLY =~ ^[Nn]$ ]]
+    then
+    if [ -z "$(ls -l /etc/php/7.0/apache2/php.ini)" ]; then
+    echo "Anda tidak menggunakan apache server ubuntu server 16.04 - PHP 7.0"
+    else
+    sudo cp /etc/php/7.0/apache2/php.ini /etc/php/7.0/apache2/phpini.backup
+    sudo cp support/php.ini /etc/php/7.0/apache2
+    sudo service apache2 restart
+    fi
+    fi
+    ;;
+
+
+12) echo -n "Masukkan alamat sub domain : "
+    read namasubdomain
+    if [ -z "$(ls -A /etc/apache2/sites-available/$namasubdomain.conf)" ]; then
     echo "Installasi virtualhost dengan domain"
     sudo cp support/subdomain.conf /etc/apache2/sites-available/$namasubdomain.conf
     sudo nano /etc/apache2/sites-available/$namasubdomain.conf
     sudo a2ensite $namasubdomain.conf
     sudo service apache2 reload
+    else
+    echo "Sub domain yang anda masukkan sudah ada"
     fi
     ;;   
-    
-7)  echo -n "Masukkan alamat domain / subdomain : "
+
+13) echo -n "Masukkan alamat domain / subdomain : "
+    read namasubdomain
+    if [ -z "$(ls -A /etc/apache2/sites-available/$namasubdomain.conf)" ]; then
+    echo "Anda belum buat virtualhost dengan nama sub domain tersebut"
+    else
+    sudo rm /etc/apache2/sites-available/$namasubdomain.conf
+    fi
+    ;;
+
+14) echo -n "Masukkan alamat domain / subdomain : "
     read namasubdomain
     if [ -z "$(ls -A /etc/apache2/sites-available/$namasubdomain.conf)" ]; then
     echo "Anda belum buat virtualhost dengan nama sub domain tersebut"
     else
     sudo nano /etc/apache2/sites-available/$namasubdomain.conf
+    sudo service apache2 restart
     fi
     ;;
 
-8) exit
+
+15) exit
     ;;
 *)    echo "Maaf, menu tidak ada"
 esac
 echo ""
-echo "Nasihosting for X-code (Ubuntu Server 16.04) Beta 3"
+echo "Nasihosting for X-code - Ubuntu Server 16.04 - Beta 7"
 echo "Oleh Kurniawan - trainingxcode@gmail.com. xcode.or.id"
 echo ""
 echo -n "Kembali ke menu? [y/n]: ";
