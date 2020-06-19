@@ -10,18 +10,11 @@ File manager bisa dicari di google, diletakkan pada /home/gudang
 
 Cara menggunakan
 ----------------
-1. Tambahkan pada bagian ini di /etc/apache2/apache2.conf
-   <Directory /home/>
-        Options -Indexes +FollowSymLinks
-        AllowOverride None
-        Require all granted
-   </Directory>
-
-2. Buat folder di /home/gudang dan isi file manager di situ, jangan lupa index dikunci jika hosting beolum diamankan dari setting server
-3. git clone https://github.com/kurniawandata/nasihosting
-4. cd nasihosting
-5. chmod -R 777 *
-6. ./nasihosting.sh
+1. Buat folder di /home/gudang dan isi file manager di situ, jangan lupa index dikunci jika hosting beolum diamankan dari setting server
+2. git clone https://github.com/kurniawandata/nasihosting
+3. cd nasihosting
+4. chmod -R 777 *
+5. ./nasihosting.sh
 
 Keterangan
 ----------
