@@ -36,6 +36,7 @@ case $choice in
     echo "folder untuk sub domain belum ada"
     else
     echo "Sub domain sudah ada"
+    fi
     ;;   
 
 3)  sudo ls -l /mnt/*
