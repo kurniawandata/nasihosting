@@ -71,22 +71,22 @@ case $choice in
 6)  echo -n "Masukkan alamat sub domain : "
     read namasubdomain
     if [ -z "$(ls -A /home/$namasubdomain/*)" ]; then
+    echo "Sub domain yang anda masukkan sudah ada"
+    else
     echo "Installasi virtualhost dengan domain"
     sudo cp support/subdomain.conf /etc/apache2/sites-available/$namasubdomain.conf
     sudo nano /etc/apache2/sites-available/$namasubdomain.conf
     sudo a2ensite $namasubdomain.conf
     sudo service apache2 reload
-    else
-    echo "Sub domain yang anda masukkan sudah ada"
     fi
     ;;   
     
 7)  echo -n "Masukkan alamat domain / subdomain : "
     read namasubdomain
     if [ -z "$(ls -A /etc/apache2/sites-available/$namasubdomain.conf)" ]; then
-    sudo nano /etc/apache2/sites-available/$namasubdomain.conf
+    echo "Anda belum buat virtualhost dengan nama sub domain tersebut"
     else
-    echo "Sub domain yang anda masukkan belum ada"
+    sudo nano /etc/apache2/sites-available/$namasubdomain.conf
     fi
     ;;
 
