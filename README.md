@@ -1,7 +1,7 @@
 # nasihosting
 Nasihosting
 -----------
-Script untuk mendukung otomatisasi membuat akun hosting gratis
+Script untuk mendukung otomatisasi akun hosting gratis dengan apache server di Ubuntu Server
 
 File manager
 ------------
