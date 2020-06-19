@@ -32,7 +32,7 @@ case $choice in
 
 2)  echo -n "Masukkan nama sub domain "
     read namasubdomain
-    if [ -z "$(ls -A /var/www/html/$namasubdomain/*)" ]; then
+    if [ -z "$(ls -A /home/$namasubdomain/*)" ]; then
     echo "folder untuk sub domain yang anda masukkan belum ada"
     else
     echo "Folder untuk sub domain yang anda masukkan sudah ada"
@@ -47,15 +47,15 @@ case $choice in
     if [ -z "$(ls -A /mnt/$img)" ]; then
     echo "Buat img.."
     sudo dd if=/dev/zero of=/mnt/$img bs=1024 count=10000
-    sudo mkdir -p /var/www/html/$namasubdomain
+    sudo mkdir -p /home/$namasubdomain
     sudo mkfs.ext4 /mnt/$img
-    sudo mount -o loop /mnt/$img /var/www/html/$namasubdomain
+    sudo mount -o loop /mnt/$img /home/$namasubdomain
     sudo nano /etc/fstab
-    sudo rmdir /var/www/html/$namasubdomain/lost+found
-    sudo cp /home/gudang/* /var/www/html/$namasubdomain
-    sudo chmod -R 777 /var/www/html/$namasubdomain  
-    sudo chown www-data.www-data /var/www/html/$namasubdomain  
-    sudo chown www-data.www-data -R /var/www/html/$namasubdomain
+    sudo rmdir /home/$namasubdomain/lost+found
+    sudo cp /home/gudang/* /home/$namasubdomain
+    sudo chmod -R 777 /home/$namasubdomain  
+    sudo chown www-data.www-data /home/$namasubdomain  
+    sudo chown www-data.www-data -R /home/$namasubdomain
     else
     echo "File img yang anda masukkan sudah ada"
     fi
@@ -65,7 +65,7 @@ case $choice in
     ;;
 5)  echo -n "Masukkan alamat sub domain : "
     read namasubdomain
-    if [ -z "$(ls -A /var/www/html/$namasubdomain/*)" ]; then
+    if [ -z "$(ls -A /home/$namasubdomain/*)" ]; then
     echo "Installasi virtualhost dengan domain"
     sudo cp support/subdomain.conf /etc/apache2/sites-available/$namasubdomain.conf
     sudo nano /etc/apache2/sites-available/$namasubdomain.conf
