@@ -23,13 +23,11 @@ Keterangan
 2. Nama free.img bisa diganti dengan nama file lain jika ingin menambah akun lain
 3. Kata sample di atas bisa diganti dengan nama sub domain yang akan di buat
 4. Di virtualhost ganti sample dengan melakukan find dan replace all dengan nama sub domain yang akan dibuat
-5. Untuk membangun hosting tidak cukup dengan script ini, masih ada berbagai pengamanan server yang harus dilakukan dan itu hanya dibahas di X-code Training ( http://xcode.or.id/professional )
+5. Untuk pengamanan hosting tidak cukup dengan script ini, masih ada berbagai pengamanan server yang harus dilakukan, dibahas di X-code Training ( http://xcode.or.id/professional )
 
 Script ini telah diimplementasi
 -------------------------------
 Anda bisa mengakses nasihosting di https://nasihosting.com
-
-
 
 Licensi
 ------- 
