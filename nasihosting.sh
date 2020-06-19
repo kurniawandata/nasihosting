@@ -33,9 +33,9 @@ case $choice in
 2)  echo -n "Masukkan nama sub domain "
     read namasubdomain
     if [ -z "$(ls -A /var/www/html/$namasubdomain/*)" ]; then
-    echo "folder untuk sub domain belum ada"
+    echo "folder untuk sub domain yang anda masukkan belum ada"
     else
-    echo "Sub domain sudah ada"
+    echo "Folder untuk sub domain yang anda masukkan sudah ada"
     fi
     ;;   
 
