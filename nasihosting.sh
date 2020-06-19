@@ -7,7 +7,7 @@ while [[ $again == 'Y' ]] || [[ $again == 'y' ]];
 do
 clear
 echo "=================================================================";
-echo " Nasihosting for X-code (Ubuntu server) - Beta 1                 ";
+echo " Nasihosting for X-code (Ubuntu server 16.04) - Beta 1           ";
 echo " Progammer : Kurniawan. xcode.or.id                              ";
 echo " Version 1.0.0 - 19/10/2020                                      ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
@@ -28,13 +28,14 @@ read -p " Masukkan Nomor Pilihan Anda antara [1 - 8] : " choice;
 echo "";
 case $choice in
 
-1)  sudo cp /etc/apache2/apache2.conf backup
+1)  echo "Aktifkan /home.."
+    sudo cp /etc/apache2/apache2.conf backup
     sudo cp support/apache2.conf /etc/apache2/
     ;;
-1)  sudo ls -l /mnt/
+2)  sudo ls -l /mnt/
     ;;
 
-2)  echo -n "Masukkan nama sub domain "
+3)  echo -n "Masukkan nama sub domain "
     read namasubdomain
     if [ -z "$(ls -A /home/$namasubdomain/*)" ]; then
     echo "folder untuk sub domain yang anda masukkan belum ada"
@@ -43,7 +44,7 @@ case $choice in
     fi
     ;;   
 
-3)  sudo ls -l /mnt/*
+4)  sudo ls -l /mnt/*
     echo -n "Masukkan nama file img : "
     read img
     echo -n "Masukkan nama sub domain : "
@@ -65,9 +66,9 @@ case $choice in
     fi
     ;;   
 
-4)  sudo nano /etc/fstab
+5)  sudo nano /etc/fstab
     ;;
-5)  echo -n "Masukkan alamat sub domain : "
+6)  echo -n "Masukkan alamat sub domain : "
     read namasubdomain
     if [ -z "$(ls -A /home/$namasubdomain/*)" ]; then
     echo "Installasi virtualhost dengan domain"
@@ -80,7 +81,7 @@ case $choice in
     fi
     ;;   
     
-6)  echo -n "Masukkan alamat domain / subdomain : "
+7)  echo -n "Masukkan alamat domain / subdomain : "
     read namasubdomain
     if [ -z "$(ls -A /etc/apache2/sites-available/$namasubdomain.conf)" ]; then
     sudo nano /etc/apache2/sites-available/$namasubdomain.conf
@@ -89,12 +90,12 @@ case $choice in
     fi
     ;;
 
-7) exit
+8) exit
     ;;
 *)    echo "Maaf, menu tidak ada"
 esac
 echo ""
-echo "Nasihosting for X-code (Ubuntu Server) Beta 1"
+echo "Nasihosting for X-code (Ubuntu Server 16.04) Beta 1"
 echo "Oleh Kurniawan - trainingxcode@gmail.com. xcode.or.id"
 echo ""
 echo -n "Kembali ke menu? [y/n]: ";
