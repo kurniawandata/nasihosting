@@ -46,7 +46,7 @@ case $choice in
     ;;   
 
 4)  sudo ls -l /mnt/*
-    echo -n "Masukkan nama file img (Jangan lupa tambahkan img, misal akun1.img) : "
+    echo -n "Masukkan nama file img (Jangan lupa tambahkan ekstensi img, misal akun1.img) : "
     read img
     echo -n "Masukkan nama sub domain : "
     read namasubdomain
