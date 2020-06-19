@@ -2,7 +2,7 @@
 
 ![alt text](http://xcode.or.id/04_small-logo.png)
 
-Script untuk mendukung otomatisasi akun hosting dengan apache server di Ubuntu Server 16.04
+Script untuk mendukung otomatisasi akun hosting dengan apache server di Ubuntu Server 16.04 Beta 7
 
 File manager
 ------------
@@ -22,8 +22,7 @@ Keterangan
 1. Saat masuk di /etc/fstab, masukkan : /mnt/free.img /home/sample ext4 loop 1 2
 2. Nama free.img bisa diganti dengan nama file lain jika ingin menambah akun lain
 3. Kata sample di atas bisa diganti dengan nama sub domain yang akan di buat
-4. Di virtualhost ganti sample dengan melakukan find dan replace all dengan nama sub domain yang akan dibuat
-5. Untuk pengamanan hosting tidak cukup dengan script ini, masih ada berbagai pengamanan server yang harus dilakukan seperti contoh konfigurasi php.ini pada disable_function untuk menangani akses remote shell dari PHP Shell, hal seperti itu dibahas di X-code Training ( http://xcode.or.id/professional )
+4. Di virtualhost ganti sample dengan melakukan find dan replace all dengan nama sub domain yang akan dibuat (Jika di linux pakai nano bisa menggunakan ctrl + \).
 
 Script ini telah diimplementasi
 -------------------------------
