@@ -12,21 +12,25 @@ echo " Progammer : Kurniawan. xcode.or.id                              ";
 echo " Version 1.0.0 - 19/10/2020                                      ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Instalasi                                                       ";
-echo " [1] Lihat daftar file img                                       ";
-echo " [2] Cek folder untuk client hosting                             ";
-echo " [3] Buat file img, edit /etc/fstab/, mount dan salin data       ";
-echo " [4] Edit file /etc/fstab                                        ";
+echo " [1] Aktifkan /home pada /etc/apache2/apache2.conf               ";
+echo " [2] Lihat daftar file img                                       ";
+echo " [3] Cek folder untuk client hosting                             ";
+echo " [4] Buat file img, edit /etc/fstab/, mount dan salin data       ";
+echo " [5] Edit file /etc/fstab                                        ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Virtual host                                                    ";
-echo " [5] Buat virtuahost                                             ";
-echo " [6] Edit virtualhost                                            ";
+echo " [6] Buat virtuahost                                             ";
+echo " [7] Edit virtualhost                                            ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
-echo " [7] Exit                                                        ";
+echo " [8] Exit                                                        ";
 echo "=================================================================";
-read -p " Masukkan Nomor Pilihan Anda antara [1 - 7] : " choice;
+read -p " Masukkan Nomor Pilihan Anda antara [1 - 8] : " choice;
 echo "";
 case $choice in
 
+1)  sudo cp /etc/apache2/apache2.conf backup
+    sudo cp support/apache2.conf /etc/apache2/
+    ;;
 1)  sudo ls -l /mnt/
     ;;
 
