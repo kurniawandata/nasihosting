@@ -9,7 +9,7 @@ clear
 echo "=================================================================";
 echo " Nasihosting for X-code (Ubuntu server 16.04) - Beta 1           ";
 echo " Progammer : Kurniawan. xcode.or.id                              ";
-echo " Version 1.0.0 - 19/10/2020                                      ";
+echo " Version 1.0.0 - 19/06/2020                                      ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Instalasi                                                       ";
 echo " [1] Aktifkan /home pada /etc/apache2/apache2.conf               ";
