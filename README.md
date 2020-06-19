@@ -31,7 +31,7 @@ Anda bisa mengakses nasihosting di https://nasihosting.com
 
 
 
-LICENSI
+Licensi
 ------- 
 GNU General Public License 
 
