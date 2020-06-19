@@ -6,11 +6,11 @@ Script untuk mendukung otomatisasi akun hosting dengan apache server di Ubuntu S
 
 File manager
 ------------
-File manager bisa mengambil dari https://github.com/prasathmani/tinyfilemanager, salin isinya di /home/gudang
+File manager bisa mengambil dari https://github.com/alexantr/filemanager, salin isinya di /home/gudang
 
 Cara menggunakan
 ----------------
-1. Buat folder di /home/gudang dan isi file manager ( https://github.com/prasathmani/tinyfilemanager ) di situ, jangan lupa index dikunci jika hosting belum diamankan dari setting server
+1. Buat folder di /home/gudang dan isi file manager ( https://github.com/alexantr/filemanager ) di situ, jangan lupa index dikunci jika hosting belum diamankan dari setting server
 2. git clone https://github.com/kurniawandata/nasihosting
 3. cd nasihosting
 4. chmod -R 777 *
