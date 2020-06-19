@@ -61,7 +61,7 @@ case $choice in
     read namasubdomain
     if [ -z "$(ls -A /mnt/$img)" ]; then
     echo "Buat img.."
-    sudo dd if=/dev/zero of=/mnt/$img bs=1024 count=10000
+    sudo dd if=/dev/zero of=/mnt/$img bs=1024 count=100000
     sudo mkdir -p /home/$namasubdomain
     sudo mkfs.ext4 /mnt/$img
     sudo mount -o loop /mnt/$img /home/$namasubdomain
