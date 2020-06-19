@@ -9,11 +9,12 @@ File manager bisa dicari di google, diletakkan pada /home/gudang
 
 Keterangan
 ----------
+1. Di script ini default-nya membuat file ekstensi img 10 MB jika ingin mengubah, bisa edit scriptnya 
 1. Saat masuk di /etc/fstab, masukkan : /mnt/free.img /var/www/html/sample ext4 loop 1 2
-2. free.img bisa diganti dengan nama file lain jika ingin menambah akun lain
+2. Nama free.img bisa diganti dengan nama file lain jika ingin menambah akun lain
 3. Kata sample di atas bisa diganti dengan nama sub domain yang akan di buat
-4. Di virtualhost ganti sample dengan melakukan find dan replace all 
-5. Untuk membangun hosting tidak cukup dengan script ini, masih ada berbagai pengamanan server yang harus dilakukan dan itu dibahas di X-code Training ( http://xcode.or.id/professional )
+4. Di virtualhost ganti sample dengan melakukan find dan replace all dengan nama sub domain yang akan dibuat
+5. Untuk membangun hosting tidak cukup dengan script ini, masih ada berbagai pengamanan server yang harus dilakukan dan itu hanya dibahas di X-code Training ( http://xcode.or.id/professional )
 
 LICENSI
 ------- 
