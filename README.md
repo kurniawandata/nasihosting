@@ -6,7 +6,7 @@ Script untuk mendukung otomatisasi akun hosting dengan apache server di Ubuntu S
 
 File manager
 ------------
-File manager bisa dicari di google, diletakkan pada /home/gudang
+File manager bisa dicari di google, letakkan file manager pada /home/gudang
 
 Cara menggunakan
 ----------------
