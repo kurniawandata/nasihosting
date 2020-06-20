@@ -1,11 +1,3 @@
-
-echo ""
-echo -n "Kembali ke menu? [y/n]: ";
-read again;
-while [[ $again != 'Y' ]] && [[ $again != 'y' ]] && [[ $again != 'N' ]] && [[ $again != 'n' ]];
-do
-echo "Masukkan yang anda pilih tidak ada di menu";
-echo -n "Kembali ke menu? [y/n]: ";#!/bin/bash
 #Progammer : Kurniawan. trainingxcode@gmail.com. xcode.or.id.
 #Program ini dapat digunakan untuk personal ataupun komersial.
 #X-code Media - xcode.or.id / xcodetraining.com
