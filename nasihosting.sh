@@ -40,13 +40,19 @@ case $choice in
 1)  echo "Aktifkan /home.."
     sudo cp /etc/apache2/apache2.conf backup
     sudo cp support/apache2.conf /etc/apache2/
-    service apache2 restart
     sudo apt-get install zip unzip php-zip
+    sudo apt-get remove 7.0
+    sudo apt-get autoremove php7.0
+    sudo apt-get purge php7.0
+    sudo apt-get autoremove --purge php7.0
     sudo apt-get update
     sudo apt -y install software-properties-common
     sudo add-apt-repository ppa:ondrej/php 
     sudo apt-get update
     sudo apt -y install php7.4
+    service apache2 restart
+    read -p "Tekan enter untuk restart"
+    reboot
     ;;
 2)  sudo ls -l /mnt/
     ;;
