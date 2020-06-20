@@ -12,7 +12,7 @@ echo " Progammer : Kurniawan. xcode.or.id                              ";
 echo " Version 1.0 Beta 11 - 20/06/2020                                ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Instalasi                                                       ";
-echo " [1]  Aktifkan /home, zip unzip php-zip, update PHP ke 7.4       ";
+echo " [1]  Aktifkan /home, zip unzip php-zip, install PHP 7.4         ";
 echo " [2]  Lihat daftar file img                                      ";
 echo " [3]  Cek folder untuk client hosting                            ";
 echo " [4]  Buat file img, mount, edit /etc/fstab/                     ";
