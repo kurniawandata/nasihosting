@@ -135,14 +135,14 @@ case $choice in
     fi
     ;;
 
-11) read -p "Apakah anda yakin menggunakan apache server dengan ubuntu server 16.04 - PHP 7.0? y/n :" -n 1 -r
+11) read -p "Apakah anda yakin menggunakan apache server dengan PHP 7.4? y/n :" -n 1 -r
     echo  ""
     if [[ ! $REPLY =~ ^[Nn]$ ]]
     then
-    if [ -z "$(ls -l /etc/php/7.0/apache2/php.ini)" ]; then
-    echo "Anda tidak menggunakan apache server ubuntu server 16.04 - PHP 7.4"
+    if [ -z "$(ls -l /etc/php/7.4/apache2/php.ini)" ]; then
+    echo "Anda tidak menggunakan apache server dengan PHP 7.4"
     else
-    sudo cp /etc/php/7.4/apache2/php.ini /etc/php/7.0/apache2/phpini.backup
+    sudo cp /etc/php/7.4/apache2/php.ini /etc/php/7.4/apache2/phpini.backup
     sudo cp support/php.ini /etc/php/7.4/apache2
     sudo service apache2 restart
     fi
