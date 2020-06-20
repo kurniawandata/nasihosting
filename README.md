@@ -4,7 +4,7 @@ Nasihosting v1.0 Beta 15
 --------------------
 ![alt text](http://xcode.or.id/04_small-logo.png)
 
-Script untuk mendukung otomatisasi akun hosting dengan apache server di Ubuntu Server 16.04 
+Script untuk mendukung otomatisasi akun hosting dengan apache server di Ubuntu Server
 
 Jangan menggunakan PHP di bawah versi 7.4 
 -------------------------
