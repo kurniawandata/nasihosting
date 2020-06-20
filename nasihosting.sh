@@ -7,7 +7,7 @@ while [[ $again == 'Y' ]] || [[ $again == 'y' ]];
 do
 clear
 echo "=================================================================";
-echo " Nasihosting for Apache Server (Ubuntu Server) - Beta 20         ";
+echo " Nasihosting for Apache Server - Ubuntu Server - Beta 21         ";
 echo " Progammer : Kurniawan. xcode.or.id                              ";
 echo " Version 1.0 Beta 19 - 21/06/2020                                ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
@@ -22,13 +22,13 @@ echo " [7]  Salin file manager pada folder untuk client hosting serta  ";
 echo "      pengaturan hak aksesnya                                    ";
 echo " [8]  Edit file /etc/fstab                                       ";
 echo " [9]  Cek mount                                                  ";
-echo " [10]  Umount file img dan edit /etc/fstab                        ";
+echo " [10]  Umount file img dan edit /etc/fstab                       ";
 echo " [11] Hapus data file img                                        ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Aktifkan pengamanan dari remote shell PHP Shell                 ";
-echo " [12] Cek php.ini di PHP 7.4 (/etc/apache2/php7.4/apache/php.ini)";
-echo " [13] Amankan dari PHP Shell(/etc/apache2/php7.4/apache/php.ini) ";
-echo " [14] Edit php.ini (/etc/apache2/php7.4/apache/php.ini)          ";
+echo " [12] Cek php.ini di PHP 7.4 - /etc/apache2/php7.4/apache/php.ini";
+echo " [13] Amankan dari PHP Shell - /etc/apache2/php7.4/apache/php.ini ";
+echo " [14] Edit php.ini - /etc/apache2/php7.4/apache/php.ini          ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Virtual host                                                    ";
 echo " [15] Cek file virtualhost                                       ";
@@ -219,7 +219,7 @@ case $choice in
 *)    echo "Maaf, menu tidak ada"
 esac
 echo ""
-echo "Nasihosting for apache server (Ubuntu Server) - Beta 20"
+echo "Nasihosting for apache server - Ubuntu Server - Beta 21"
 echo "Oleh Kurniawan - trainingxcode@gmail.com. xcode.or.id"
 echo ""
 echo -n "Kembali ke menu? [y/n]: ";
