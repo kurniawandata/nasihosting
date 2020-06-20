@@ -6,9 +6,9 @@ Nasihosting v1.0 Beta 14
 
 Script untuk mendukung otomatisasi akun hosting dengan apache server di Ubuntu Server 16.04 
 
-Harus menggunakan PHP 7.4
+Jangan menggunakan PHP di bawah versi 7.4 
 -------------------------
-Jangan install versi php yang bukan versi 7.4, jika punya server, pastikan install php 7.4, instalasi PHP 7.4 sudah disertakan dalam program, jika anda sudah pakai PHP versi sebelumnya maka lakukan remove dan pastikan nanti PHP 7.4 yang berjalan.
+Jangan install PHP di bawah versi 7.4, jika punya server, pastikan install php 7.4, instalasi PHP 7.4 sudah disertakan dalam program, jika anda sudah pakai PHP versi sebelumnya maka lakukan remove dan pastikan nanti PHP 7.4 yang berjalan.
 
 File manager
 ------------
