@@ -7,58 +7,59 @@ while [[ $again == 'Y' ]] || [[ $again == 'y' ]];
 do
 clear
 echo "=================================================================";
-echo " Nasihosting for Apache Server (Ubuntu Server)                   ";
+echo " Nasihosting for Apache Server (Ubuntu Server) - Beta 20         ";
 echo " Progammer : Kurniawan. xcode.or.id                              ";
 echo " Version 1.0 Beta 19 - 21/06/2020                                ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Instalasi                                                       ";
-echo " [1]  Aktifkan /home untuk virtualhost client, zip unzip php-zip,";
-echo "      install PHP 7.4 dan reboot                                 ";
-echo " [2]  Lihat daftar file img di /mnt                              ";
-echo " [3]  Cek folder untuk client hosting di /home                   ";
-echo " [4]  Buat file img, mount, edit /etc/fstab/                     ";
-echo " [5]  Cek isi folder client hosting                              ";
-echo " [6]  Salin file manager pada folder untuk client hosting serta  ";
+echo " [1]  Install PHP 7.4, salin phpinfo.php di /var/www/html        ";
+echo " [2]  Aktifkan /home untuk virtualhost client, zip unzip php-zip ";                                ";
+echo " [3]  Lihat daftar file img di /mnt                              ";
+echo " [4]  Cek folder untuk client hosting di /home                   ";
+echo " [5]  Buat file img, mount, edit /etc/fstab/                     ";
+echo " [6]  Cek isi folder client hosting                              ";
+echo " [7]  Salin file manager pada folder untuk client hosting serta  ";
 echo "      pengaturan hak aksesnya                                    ";
-echo " [7]  Edit file /etc/fstab                                       ";
-echo " [8]  Cek mount                                                  ";
-echo " [9]  Umount file img dan edit /etc/fstab                        ";
-echo " [10] Hapus data file img                                        ";
+echo " [8]  Edit file /etc/fstab                                       ";
+echo " [9]  Cek mount                                                  ";
+echo " [10]  Umount file img dan edit /etc/fstab                        ";
+echo " [11] Hapus data file img                                        ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Aktifkan pengamanan dari remote shell PHP Shell                 ";
-echo " [11] Cek php.ini di PHP 7.4 (/etc/apache2/php7.4/apache/php.ini)";
-echo " [12] Amankan dari PHP Shell(/etc/apache2/php7.4/apache/php.ini) ";
-echo " [13] Edit php.ini (/etc/apache2/php7.4/apache/php.ini)          ";
+echo " [12] Cek php.ini di PHP 7.4 (/etc/apache2/php7.4/apache/php.ini)";
+echo " [13] Amankan dari PHP Shell(/etc/apache2/php7.4/apache/php.ini) ";
+echo " [14] Edit php.ini (/etc/apache2/php7.4/apache/php.ini)          ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Virtual host                                                    ";
-echo " [14] Cek file virtualhost                                       ";
-echo " [15] Buat file virtualhost, aktifkan, service apache2 restart   ";
-echo " [16] Hapus file virtualhost                                     ";
-echo " [17] Edit virtualhost dan service apache2 restart               ";
+echo " [15] Cek file virtualhost                                       ";
+echo " [16] Buat file virtualhost, aktifkan, service apache2 restart   ";
+echo " [17] Hapus file virtualhost                                     ";
+echo " [18] Edit virtualhost dan service apache2 restart               ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
-echo " [18] Exit                                                       ";
+echo " [19] Exit                                                       ";
 echo "=================================================================";
-read -p " Masukkan Nomor Pilihan Anda antara [1 - 18] : " choice;
+read -p " Masukkan Nomor Pilihan Anda antara [1 - 19] : " choice;
 echo "";
 case $choice in
 
-1)  echo "Aktifkan /home.."
-    sudo cp /etc/apache2/apache2.conf backup
-    sudo cp support/apache2.conf /etc/apache2/
-    sudo apt-get install zip unzip php-zip
-    sudo apt-get update
+1)  sudo apt-get update
     sudo apt -y install software-properties-common
     sudo add-apt-repository ppa:ondrej/php 
     sudo apt-get update
     sudo apt -y install php7.4
-    service apache2 restart
-    read -p "Tekan enter untuk restart"
+    sudo cp support/phpinfo.php /var/www/html
+    read -p "Tekan enter untuk restart, instalasi selesai, penyalinan phpinfo.php selesai, setelah restart, akses phpinfo.php lewat browser untuk cek bahwa web server benar-benar sudah menggunakan PHP 7.4, jangan akses phpinfo.php setelah diamankan dari PHP Shell"
     reboot
+
+2)  echo "Aktifkan /home.."
+    sudo cp /etc/apache2/apache2.conf backup
+    sudo cp support/apache2.conf /etc/apache2/
+    sudo apt-get install zip unzip php-zip
     ;;
-2)  sudo ls -l /mnt/
+3)  sudo ls -l /mnt/
     ;;
 
-3)  echo -n "Masukkan nama sub domain "
+4)  echo -n "Masukkan nama sub domain "
     read namasubdomain
     if [ -z "$(ls -A /home/$namasubdomain/*)" ]; then
     echo "folder untuk sub domain yang anda masukkan belum ada"
@@ -67,7 +68,7 @@ case $choice in
     fi
     ;;   
 
-4)  sudo ls -l /mnt/*
+5)  sudo ls -l /mnt/*
     echo -n "Masukkan nama file img - Jangan lupa tambahkan ekstensi img, misal akun1.img : "
     read img
     echo -n "Masukkan nama sub domain : "
@@ -84,7 +85,7 @@ case $choice in
     fi
     ;;   
 
-5)  echo -n "Masukkan alamat sub domain : "
+6)  echo -n "Masukkan alamat sub domain : "
     read namasubdomain
     if [ -z "$(ls -A /home/$namasubdomain/*)" ]; then
     echo "Anda belum buat folder dengan nama sub domain tersebut"
@@ -93,7 +94,7 @@ case $choice in
     fi
     ;;
 
-6)  echo -n "Masukkan alamat sub domain : "
+7)  echo -n "Masukkan alamat sub domain : "
     read namasubdomain
     if [ -z "$(ls -A /home/$namasubdomain/*)" ]; then
     sudo rmdir /home/$namasubdomain/lost+found
@@ -106,13 +107,13 @@ case $choice in
     fi
     ;;
   
-7)  sudo nano /etc/fstab
+8)  sudo nano /etc/fstab
     ;;
 
-8)  sudo mount
+9)  sudo mount
     ;;
 
-9)  sudo ls -l /mnt/*
+10)  sudo ls -l /mnt/*
     echo -n "Masukkan nama file img - Jangan lupa tambahkan ekstensi img, misal akun1.img : "
     read img
     echo -n "Masukkan nama sub domain : "
@@ -126,7 +127,7 @@ case $choice in
     fi
     ;;
 
-10) read -p "Apakah anda yakin akan menghapus file img client ? y/n :" -n 1 -r
+11) read -p "Apakah anda yakin akan menghapus file img client ? y/n :" -n 1 -r
     echo  ""
     if [[ ! $REPLY =~ ^[Nn]$ ]]
     then
@@ -143,14 +144,14 @@ case $choice in
     ;;
 
 
-11) if [ -z "$(ls -l /etc/php/7.4/apache2/php.ini)" ]; then
+12) if [ -z "$(ls -l /etc/php/7.4/apache2/php.ini)" ]; then
     echo "File php.ini tidak ada di /etc/php/7.4/apache2/php.ini"
     else
     echo "File php.ini ada di /etc/php/7.4/apache2/php.ini" 
     fi
     ;;
 
-12) read -p "Apakah anda yakin menggunakan apache server dengan PHP 7.4? y/n :" -n 1 -r
+13) read -p "Apakah anda yakin menggunakan apache server dengan PHP 7.4? y/n :" -n 1 -r
     echo  ""
     if [[ ! $REPLY =~ ^[Nn]$ ]]
     then
@@ -164,7 +165,7 @@ case $choice in
     fi
     ;;
 
-13) if [ -z "$(ls -l /etc/php/7.4/apache2/php.ini)" ]; then
+14) if [ -z "$(ls -l /etc/php/7.4/apache2/php.ini)" ]; then
     echo "File php.ini tidak ada di /etc/php/7.4/apache2/php.ini"
     else
     sudo nano /etc/php/7.4/apache2/php.ini
@@ -172,7 +173,7 @@ case $choice in
     ;;
 
 
-14) echo -n "Masukkan alamat sub domain : "
+15) echo -n "Masukkan alamat sub domain : "
     read namasubdomain
     if [ -z "$(ls -A /etc/apache2/sites-available/$namasubdomain.conf)" ]; then
     echo "Anda belum buat virtualhost dengan nama sub domain tersebut"
@@ -181,7 +182,7 @@ case $choice in
     fi
     ;;
 
-15) echo -n "Masukkan alamat sub domain : "
+16) echo -n "Masukkan alamat sub domain : "
     read namasubdomain
     if [ -z "$(ls -A /etc/apache2/sites-available/$namasubdomain.conf)" ]; then
     echo "Installasi virtualhost dengan domain"
@@ -194,7 +195,7 @@ case $choice in
     fi
     ;;   
 
-16) echo -n "Masukkan alamat domain / subdomain : "
+17) echo -n "Masukkan alamat domain / subdomain : "
     read namasubdomain
     if [ -z "$(ls -A /etc/apache2/sites-available/$namasubdomain.conf)" ]; then
     echo "Anda belum buat virtualhost dengan nama sub domain tersebut"
@@ -203,7 +204,7 @@ case $choice in
     fi
     ;;
 
-17) echo -n "Masukkan alamat domain / subdomain : "
+18) echo -n "Masukkan alamat domain / subdomain : "
     read namasubdomain
     if [ -z "$(ls -A /etc/apache2/sites-available/$namasubdomain.conf)" ]; then
     echo "Anda belum buat virtualhost dengan nama sub domain tersebut"
@@ -213,12 +214,12 @@ case $choice in
     fi
     ;;
 
-18) exit
+19) exit
     ;;
 *)    echo "Maaf, menu tidak ada"
 esac
 echo ""
-echo "Nasihosting for apache server (Ubuntu Server) - Beta 19"
+echo "Nasihosting for apache server (Ubuntu Server) - Beta 20"
 echo "Oleh Kurniawan - trainingxcode@gmail.com. xcode.or.id"
 echo ""
 echo -n "Kembali ke menu? [y/n]: ";
