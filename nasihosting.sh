@@ -155,19 +155,19 @@ case $choice in
     if [[ ! $REPLY =~ ^[Nn]$ ]]
     then
     if [ -z "$(ls -l /etc/php/7.4/apache2/php.ini)" ]; then
-    echo "File php.ini ada di /etc/php/7.4/apache2/php.ini"
-    else
     sudo cp /etc/php/7.4/apache2/php.ini /etc/php/7.4/apache2/phpini.backup
     sudo cp support/php.ini /etc/php/7.4/apache2
     sudo service apache2 restart
+    else
+    echo "File php.ini tidak ada di /etc/php/7.4/apache2/php.ini"
     fi
     fi
     ;;
 
 13) if [ -z "$(ls -l /etc/php/7.4/apache2/php.ini)" ]; then
-    sudo nano /etc/php/7.4/apache2/php.ini
-    else
     echo "File php.ini tidak ada di /etc/php/7.4/apache2/php.ini"
+    else
+    sudo nano /etc/php/7.4/apache2/php.ini
     fi
     ;;
 
