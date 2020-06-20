@@ -237,7 +237,3 @@ echo -n "Kembali ke menu? [y/n]: ";
 read again;
 done
 done
-
-read again;
-done
-done
