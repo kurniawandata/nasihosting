@@ -9,7 +9,7 @@ clear
 echo "=================================================================";
 echo " Nasihosting for X-code for Ubuntu server 16.04                  ";
 echo " Progammer : Kurniawan. xcode.or.id                              ";
-echo " Version 1.0 Beta 9 - 20/06/2020                                 ";
+echo " Version 1.0 Beta 10 - 20/06/2020                                 ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Instalasi                                                       ";
 echo " [1]  Aktifkan /home pada /etc/apache2/apache2.conf dan lainnya  ";
@@ -183,7 +183,7 @@ case $choice in
 *)    echo "Maaf, menu tidak ada"
 esac
 echo ""
-echo "Nasihosting for X-code v1.0 Beta 9 - Ubuntu Server 16.04"
+echo "Nasihosting for X-code v1.0 Beta 10 - Ubuntu Server 16.04"
 echo "Oleh Kurniawan - trainingxcode@gmail.com. xcode.or.id"
 echo ""
 echo -n "Kembali ke menu? [y/n]: ";
