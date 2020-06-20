@@ -7,7 +7,7 @@ while [[ $again == 'Y' ]] || [[ $again == 'y' ]];
 do
 clear
 echo "=================================================================";
-echo " Nasihosting for X-code for Ubuntu server 16.04                  ";
+echo " Nasihosting for X-code for Ubuntu server                        ";
 echo " Progammer : Kurniawan. xcode.or.id                              ";
 echo " Version 1.0 Beta 11 - 20/06/2020                                ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
@@ -190,7 +190,7 @@ case $choice in
 *)    echo "Maaf, menu tidak ada"
 esac
 echo ""
-echo "Nasihosting for X-code v1.0 Beta 11 - Ubuntu Server 16.04"
+echo "Nasihosting for X-code v1.0 Beta 11 - Ubuntu Server"
 echo "Oleh Kurniawan - trainingxcode@gmail.com. xcode.or.id"
 echo ""
 echo -n "Kembali ke menu? [y/n]: ";
