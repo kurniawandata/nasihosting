@@ -41,10 +41,6 @@ case $choice in
     sudo cp /etc/apache2/apache2.conf backup
     sudo cp support/apache2.conf /etc/apache2/
     sudo apt-get install zip unzip php-zip
-    sudo apt-get remove 7.0
-    sudo apt-get autoremove php7.0
-    sudo apt-get purge php7.0
-    sudo apt-get autoremove --purge php7.0
     sudo apt-get update
     sudo apt -y install software-properties-common
     sudo add-apt-repository ppa:ondrej/php 
