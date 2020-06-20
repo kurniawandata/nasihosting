@@ -50,12 +50,14 @@ case $choice in
     sudo cp support/phpinfo.php /var/www/html
     read -p "Tekan enter untuk restart, instalasi selesai, penyalinan phpinfo.php selesai, setelah restart, akses phpinfo.php lewat browser untuk cek bahwa web server benar-benar sudah menggunakan PHP 7.4, jangan akses phpinfo.php setelah diamankan dari PHP Shell"
     reboot
-
+    ;;
+    
 2)  echo "Aktifkan /home.."
     sudo cp /etc/apache2/apache2.conf backup
     sudo cp support/apache2.conf /etc/apache2/
     sudo apt-get install zip unzip php-zip
     ;;
+    
 3)  sudo ls -l /mnt/
     ;;
 
@@ -143,7 +145,6 @@ case $choice in
     fi
     ;;
 
-
 12) if [ -z "$(ls -l /etc/php/7.4/apache2/php.ini)" ]; then
     echo "File php.ini tidak ada di /etc/php/7.4/apache2/php.ini"
     else
@@ -171,7 +172,6 @@ case $choice in
     sudo nano /etc/php/7.4/apache2/php.ini
     fi
     ;;
-
 
 15) echo -n "Masukkan alamat sub domain : "
     read namasubdomain
