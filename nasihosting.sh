@@ -9,10 +9,10 @@ clear
 echo "=================================================================";
 echo " Nasihosting for X-code for Ubuntu server 16.04                  ";
 echo " Progammer : Kurniawan. xcode.or.id                              ";
-echo " Version 1.0 Beta 10 - 20/06/2020                                 ";
+echo " Version 1.0 Beta 11 - 20/06/2020                                ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Instalasi                                                       ";
-echo " [1]  Aktifkan /home pada /etc/apache2/apache2.conf dan lainnya  ";
+echo " [1]  Aktifkan /home, zip unzip php-zip, update PHP ke 7.4       ";
 echo " [2]  Lihat daftar file img                                      ";
 echo " [3]  Cek folder untuk client hosting                            ";
 echo " [4]  Buat file img, mount, edit /etc/fstab/                     ";
@@ -42,6 +42,11 @@ case $choice in
     sudo cp support/apache2.conf /etc/apache2/
     service apache2 restart
     sudo apt-get install zip unzip php-zip
+    sudo apt-get update
+    sudo apt -y install software-properties-common
+    sudo add-apt-repository ppa:ondrej/php 
+    sudo apt-get update
+    sudo apt -y install php7.4
     ;;
 2)  sudo ls -l /mnt/
     ;;
@@ -183,7 +188,7 @@ case $choice in
 *)    echo "Maaf, menu tidak ada"
 esac
 echo ""
-echo "Nasihosting for X-code v1.0 Beta 10 - Ubuntu Server 16.04"
+echo "Nasihosting for X-code v1.0 Beta 11 - Ubuntu Server 16.04"
 echo "Oleh Kurniawan - trainingxcode@gmail.com. xcode.or.id"
 echo ""
 echo -n "Kembali ke menu? [y/n]: ";
