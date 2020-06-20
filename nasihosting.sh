@@ -167,7 +167,7 @@ case $choice in
 13) if [ -z "$(ls -l /etc/php/7.4/apache2/php.ini)" ]; then
     sudo nano /etc/php/7.4/apache2/php.ini
     else
-    echo "File php.ini tidak ada di etc/php/7.4/apache2/php.ini"
+    echo "File php.ini tidak ada di /etc/php/7.4/apache2/php.ini"
     fi
     ;;
 
