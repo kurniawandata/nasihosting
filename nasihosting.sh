@@ -30,7 +30,7 @@ echo " [12] Cek php.ini di PHP 7.4 (/etc/apache2/php7.4/apache/php.ini)";
 echo " [13] Amankan dari PHP Shell(/etc/apache2/php7.4/apache/php.ini) ";
 echo " [14] Edit php.ini (/etc/apache2/php7.4/apache/php.ini)          ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
-echo " Virtual host                                                    ";
+echo " Virtualhost                                                     ";
 echo " [15] Cek file virtualhost                                       ";
 echo " [16] Buat file virtualhost, aktifkan, service apache2 restart   ";
 echo " [17] Hapus file virtualhost                                     ";
@@ -197,7 +197,7 @@ case $choice in
     fi
     ;;   
 
-17) echo -n "Masukkan alamat domain / subdomain : "
+17) echo -n "Masukkan alamat sub domain : "
     read namasubdomain
     if [ -z "$(ls -A /etc/apache2/sites-available/$namasubdomain.conf)" ]; then
     echo "Anda belum buat virtualhost dengan nama sub domain tersebut"
@@ -206,7 +206,7 @@ case $choice in
     fi
     ;;
 
-18) echo -n "Masukkan alamat domain / subdomain : "
+18) echo -n "Masukkan alamat sub domain : "
     read namasubdomain
     if [ -z "$(ls -A /etc/apache2/sites-available/$namasubdomain.conf)" ]; then
     echo "Anda belum buat virtualhost dengan nama sub domain tersebut"
