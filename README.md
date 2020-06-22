@@ -1,53 +1,73 @@
-# nasihosting
+# PHP File Manager
 
-Nasihosting v1.0 Beta 22
---------------------
-![alt text](http://xcode.or.id/04_small-logo.png)
+A good solution for managing files and folders for developers who can't access their site over SSH or FTP.
 
-Script untuk mendukung otomatisasi akun hosting dengan apache server di Ubuntu Server
+![PHP File Manager](https://raw.github.com/alexantr/filemanager/master/phpfm.png)
 
-Jangan menggunakan PHP di bawah versi 7.4 
--------------------------
-Jangan install PHP di bawah versi 7.4, jika punya server, pastikan install php 7.4, instalasi PHP 7.4 sudah disertakan dalam program, jika anda sudah pakai PHP versi sebelumnya maka lakukan remove dan pastikan nanti PHP 7.4 yang berjalan.
+**WARNING! Do not use this script as a regular file manager in public area.
+After all actions you must delete this script from the server.**
 
-File manager
-------------
-File manager bisa mengambil dari https://github.com/alexantr/filemanager, salin isinya di /home/gudang
+## Requirements
 
-Cara menggunakan
-----------------
-1. Buat folder di /home/gudang dan isi file manager ( https://github.com/alexantr/filemanager ) di situ, jangan lupa index dikunci jika hosting belum diamankan dari setting server
-2. git clone https://github.com/kurniawandata/nasihosting
-3. cd nasihosting
-4. chmod -R 777 *
-5. ./nasihosting.sh
+- PHP 5.2 or higher.
+- [Zip extension](http://php.net/manual/en/book.zip.php) for zip and unzip actions.
+- Fileinfo, iconv and mbstring extensions are strongly recommended.
 
-Keterangan
-----------
-1. Di script ini default-nya membuat file ekstensi img 100 MB jika ingin mengubah, bisa edit scriptnya 
-1. Saat masuk di /etc/fstab, masukkan : /mnt/namafile.img /home/sample ext4 loop 1 2 (namafile.img bisa diganti bebas namanya asal ada ekstensi img)
-3. Kata sample di atas bisa diganti dengan nama sub domain yang akan dibuat
-4. Di virtualhost ganti sample dengan melakukan find dan replace all dengan nama sub domain yang akan dibuat (Jika di linux pakai nano bisa menggunakan ctrl + backslash).
+## How to use
 
-Script ini telah diimplementasi
--------------------------------
-Anda bisa mengakses nasihosting di https://nasihosting.com
+Download ZIP with the latest version from the master branch.
 
-Licensi
-------- 
-GNU General Public License 
+Copy **filemanager.php** to your website folder and open it in a web browser
+(e.g. http://yoursite/any_path/filemanager.php).
 
+## Security
 
-Program ini dibuat oleh :
---------------------------------------------
-Kurniawan. trainingxcode@gmail.com. 
-xcode.or.id
+Default username/password: **fm_admin**/**fm_admin**
 
+**Warning! Please set your own username and password in `$auth_users` before use.**
 
-Donasi :
---------
-Jika ingin donasi untuk Kurniawan
+To enable or disable authentication set `$use_auth` to `true` or `false`.
 
-![alt text](http://xcodeserver.my.id/gofood.png)
+*For better security enable HTTP Authentication in your web server.*
 
-![alt text](http://xcodeserver.my.id/gopay.png)
+## Embedding
+
+You can include file manager in another script. Just define `FM_EMBED` and other necessary constants. Example:
+
+```php
+class SomeController
+{
+    public function actionIndex()
+    {
+        define('FM_EMBED', true);
+        define('FM_SELF_URL', UrlHelper::currentUrl()); // must be set if URL to manager not equal PHP_SELF
+        require 'path/to/filemanager.php';
+    }
+}
+```
+
+Supported constants:
+
+- `FM_ROOT_PATH` - default is `$_SERVER['DOCUMENT_ROOT']`
+- `FM_ROOT_URL` - default is `'http(s)://site.domain/'`
+- `FM_SELF_URL` - default is `'http(s)://site.domain/' . $_SERVER['PHP_SELF']`
+- `FM_ICONV_INPUT_ENC` - default is `'CP1251'`
+- `FM_USE_HIGHLIGHTJS` - default is `true`
+- `FM_HIGHLIGHTJS_STYLE` - default is `'vs'`
+- `FM_DATETIME_FORMAT` - default is `'d.m.y H:i'`
+
+## Alternatives
+
+- [Tiny PHP File Manager](https://github.com/prasathmani/tinyfilemanager) with search and file editor
+- [simple php filemanager](https://github.com/jcampbell1/simple-file-manager)
+
+## Bug tracker
+
+If you have any issues with file manager, you may report them on
+[Issue tracker](https://github.com/alexantr/filemanager/issues).
+
+## License
+
+This software is released under the MIT license.
+
+Icons by [Yusuke Kamiyamane](http://p.yusukekamiyamane.com/).
