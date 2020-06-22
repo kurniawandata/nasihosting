@@ -12,7 +12,7 @@ Jangan install PHP di bawah versi 7.4, jika punya server, pastikan install php 7
 
 File manager
 ------------
-https://github.com/kotkaramit28/php-file-manager
+https://github.com/prasathmani/tinyfilemanager
 
 Cara menggunakan
 ----------------
