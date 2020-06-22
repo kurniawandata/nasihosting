@@ -14,6 +14,13 @@ File manager
 ------------
 Sumber : https://github.com/prasathmani/tinyfilemanager
 
+Penggantian password harus dilakukan pada 2 file yaitu
+1. tinyfilemanager.php
+2. config.php
+
+Untuk generate password :
+https://tinyfilemanager.github.io/docs/pwd.html
+
 Cara menggunakan
 ----------------
 1. git clone https://github.com/kurniawandata/nasihosting
