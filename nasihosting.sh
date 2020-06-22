@@ -101,7 +101,7 @@ case $choice in
     read namasubdomain
     if [ -z "$(ls -A /home/$namasubdomain/*)" ]; then
     sudo rmdir /home/$namasubdomain/lost+found
-    sudo cp /home/gudang/* /home/$namasubdomain
+    sudo cp support/* /home/$namasubdomain
     sudo chmod -R 777 /home/$namasubdomain  
     sudo chown www-data.www-data /home/$namasubdomain  
     sudo chown www-data.www-data -R /home/$namasubdomain/*
