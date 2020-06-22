@@ -9,7 +9,7 @@ clear
 echo "=================================================================";
 echo " Nasihosting for Apache Server (Ubuntu Server)                   ";
 echo " Progammer : Kurniawan. xcode.or.id                              ";
-echo " Version 1.0 Beta 22 - 22/06/2020                                ";
+echo " Version 1.0 Beta 23 - 22/06/2020                                ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Instalasi                                                       ";
 echo " [1]  Install PHP 7.4 dan salin phpinfo.php ke /var/www/html     ";
@@ -101,7 +101,7 @@ case $choice in
     read namasubdomain
     if [ -z "$(ls -A /home/$namasubdomain/*)" ]; then
     sudo rmdir /home/$namasubdomain/lost+found
-    sudo cp support/* /home/$namasubdomain
+    sudo cp filemanager/* /home/$namasubdomain
     sudo chmod -R 777 /home/$namasubdomain  
     sudo chown www-data.www-data /home/$namasubdomain  
     sudo chown www-data.www-data -R /home/$namasubdomain/*
