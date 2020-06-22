@@ -12,15 +12,14 @@ Jangan install PHP di bawah versi 7.4, jika punya server, pastikan install php 7
 
 File manager
 ------------
-File manager bisa mengambil dari https://github.com/alexantr/filemanager, salin isinya di /home/gudang
+https://github.com/kotkaramit28/php-file-manager
 
 Cara menggunakan
 ----------------
-1. Buat folder di /home/gudang dan isi file manager ( https://github.com/alexantr/filemanager ) di situ, jangan lupa index dikunci jika hosting belum diamankan dari se$
-2. git clone https://github.com/kurniawandata/nasihosting
-3. cd nasihosting
-4. chmod -R 777 *
-5. ./nasihosting.sh
+1. git clone https://github.com/kurniawandata/nasihosting
+2. cd nasihosting
+3. chmod -R 777 *
+4. ./nasihosting.sh
 
 Keterangan
 ----------
