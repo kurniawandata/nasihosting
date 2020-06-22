@@ -56,6 +56,7 @@ case $choice in
     sudo cp /etc/apache2/apache2.conf backup
     sudo cp support/apache2.conf /etc/apache2/
     sudo apt-get install zip unzip php-zip
+    service apache2 restart
     ;;
 
 3)  sudo ls -l /mnt/
