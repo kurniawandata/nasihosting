@@ -1,0 +1,22 @@
+{
+  "short_name": "Library",
+  "name": "Library",
+  "description": "My Library",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/img/logo2.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/logo2.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "theme_color": "#538299",
+  "background_color": "#538299"
+}
