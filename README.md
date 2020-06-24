@@ -15,7 +15,7 @@ File manager
 Sumber : https://github.com/prasathmani/tinyfilemanager
 
 Penggantian password harus dilakukan pada 2 file yaitu
-1. tinyfilemanager.php
+1. login.php
 2. config.php
 
 Untuk generate password :
