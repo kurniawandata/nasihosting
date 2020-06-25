@@ -58,6 +58,14 @@ Donasi :
 --------
 Jika ingin donasi untuk Kurniawan
 
+Gopay :
+
 ![alt text](http://xcodeserver.my.id/gofood.png)
 
 ![alt text](http://xcodeserver.my.id/gopay.png)
+
+Ovo :
+
+![alt text](http://xcode.or.id/ovo.png)
+
+![alt text](http://xcode.or.id/ovo2.png)
