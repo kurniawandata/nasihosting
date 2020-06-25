@@ -66,6 +66,6 @@ Gopay :
 
 Ovo :
 
-![alt text](http://xcode.or.id/ovo3.png)
+![alt text](http://xcodeserver.my.id/ovo3.png)
 
-![alt text](http://xcode.or.id/ovo2.png)
+![alt text](http://xcodeserver.my.id/ovo2.png)
