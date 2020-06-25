@@ -39,6 +39,11 @@ Script ini telah diimplementasi
 -------------------------------
 Anda bisa mengakses nasihosting di https://nasihosting.com
 
+Demo video
+----------
+https://www.youtube.com/watch?v=sbM_NbdWWeg
+
+
 Licensi
 -------
 GNU General Public License
