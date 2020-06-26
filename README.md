@@ -71,3 +71,7 @@ Ovo :
 ![alt text](http://xcodeserver.my.id/ovo2.png)
 
 Jika sudah donasi bisa whatsapp ke kurniawan untuk konfirmasi : 0858 0394 6032
+
+Daftar donator : https://xcode.or.id/donation
+
+Untuk nama donator bisa ditulis nama pribadi, nama usaha atau semacamnya, jika tidak ingin ditampilkan siapa yang mengirimkan donasi maka akan ditulis anonim.
