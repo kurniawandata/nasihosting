@@ -46,7 +46,7 @@ https://www.youtube.com/watch?v=sbM_NbdWWeg
 
 Licensi
 -------
-GNU General Public License
+GNU General Public License v3
 
 Program ini dibuat oleh :
 --------------------------------------------
