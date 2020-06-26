@@ -69,3 +69,5 @@ Ovo :
 ![alt text](http://xcodeserver.my.id/ovo3.png)
 
 ![alt text](http://xcodeserver.my.id/ovo2.png)
+
+Jika sudah donasi bisa whatsapp ke kurniawan untuk konfirmasi : 0858 0394 6032
