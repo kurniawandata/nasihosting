@@ -1,6 +1,6 @@
 # nasihosting
 
-Nasihosting v1.0 Beta 28
+Nasihosting v1.0 Beta 30
 --------------------
 ![alt text](http://xcode.or.id/04_small-logo.png)
 
@@ -12,7 +12,7 @@ Jangan install PHP di bawah versi 7.4, jika punya server, pastikan install php 7
 
 File manager
 ------------
-Sumber : https://github.com/prasathmani/tinyfilemanager
+File manager yang digunakan menggunakan Tiny File Manager dengan sumber dari https://github.com/prasathmani/tinyfilemanager
 
 Penggantian password harus dilakukan pada 2 file yaitu
 1. login.php
