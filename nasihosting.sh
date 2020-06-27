@@ -43,7 +43,7 @@ echo " [21] Monitoring log dari ip address                             ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " [22] Exit                                                       ";
 echo "=================================================================";
-read -p " Masukkan Nomor Pilihan Anda antara [1 - 21] : " choice;
+read -p " Masukkan Nomor Pilihan Anda antara [1 - 22] : " choice;
 echo "";
 case $choice in
 
