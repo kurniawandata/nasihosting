@@ -118,17 +118,19 @@ case $choice in
     fi
     ;;
 
-8)  echo -n "Masukkan alamat sub domain : "
+
+8)  sudo nano /etc/fstab
+    ;;
+
+9)  echo -n "Masukkan alamat sub domain : "
     read namasubdomain
     if [ -z "$(ls -A /home/$namasubdomain/*)" ]; then
-    sudo nano /home/$namasubdomain/config.php
-    else
     echo "Anda belum buat folder dengan nama sub domain tersebut"
+    else
+    sudo nano /home/$namasubdomain/config.php
     fi
     ;;
 
-9)  sudo nano /etc/fstab
-    ;;
 
 10)  sudo mount
     ;;
