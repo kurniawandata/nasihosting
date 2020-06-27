@@ -9,7 +9,7 @@ clear
 echo "=================================================================";
 echo " Nasihosting for Apache Server (Ubuntu Server)                   ";
 echo " Progammer : Kurniawan. xcode.or.id                              ";
-echo " Version 1.0 Beta 26 - 22/06/2020                                ";
+echo " Version 1.0 Beta 27 - 27/06/2020                                ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Instalasi                                                       ";
 echo " [1]  Install PHP 7.4 dan salin phpinfo.php ke /var/www/html     ";
@@ -74,6 +74,7 @@ case $choice in
 5)  sudo ls -l /mnt/*
     echo -n "Masukkan nama file img - Jangan lupa tambahkan ekstensi img, misal akun1.img : "
     read img
+    if [[ $img =~ \.img$ ]]; then
     echo -n "Masukkan nama sub domain : "
     read namasubdomain
     if [ -z "$(ls -A /mnt/$img)" ]; then
@@ -86,7 +87,9 @@ case $choice in
     else
     echo "File img sudah ada"
     fi
-    ;;   
+    else
+    echo "Anda lupa memasukkan ekstensi img"
+    fi
 
 6)  echo -n "Masukkan alamat sub domain : "
     read namasubdomain
