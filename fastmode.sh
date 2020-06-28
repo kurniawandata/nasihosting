@@ -30,6 +30,16 @@ sudo cp support/subdomain.conf /etc/apache2/sites-available/$namasubdomain.conf
 sudo nano /etc/apache2/sites-available/$namasubdomain.conf
 sudo a2ensite $namasubdomain.conf
 sudo service apache2 restart
+echo -n "Masukkan password root pada mysql : "
+read passmysql
+echo -n "Masukkan nama user akun mysql yang akan dibuat : "
+read namauser
+echo -n "Masukkan password untuk nama user akun mysql yang akan dibuat : "
+read passdb
+echo -n "Masukkan nama database yang akan dibuat untuk user yang akan dibuat : "
+read namadatabase
+sudo mysql -uroot -p$passmysql -e "CREATE DATABASE $namadatabase"
+sudo mysql -uroot -p$passmysql -e "GRANT ALL PRIVILEGES ON $namadatabase.* TO $namauser@localhost IDENTIFIED BY '$passdb'"
 else
 echo "File img sudah ada"
 fi
