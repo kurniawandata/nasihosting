@@ -1,4 +1,3 @@
-
 #!/bin/bash
 #Progammer : Kurniawan. trainingxcode@gmail.com. xcode.or.id.
 #Program ini dapat digunakan untuk personal ataupun komersial.
