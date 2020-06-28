@@ -9,7 +9,7 @@ clear
 echo "=================================================================";
 echo " Nasihosting for Apache Server (Ubuntu Server)                   ";
 echo " Progammer : Kurniawan. xcode.or.id                              ";
-echo " Version 1.0 Beta 30 - 28/06/2020                                ";
+echo " Version 1.0 Beta 31 - 28/06/2020                                ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Instalasi                                                       ";
 echo " [1]  Install PHP 7.4 dan salin phpinfo.php ke /var/www/html     ";
@@ -38,7 +38,7 @@ echo " [18] Hapus file virtualhost                                     ";
 echo " [19] Edit virtualhost dan service apache2 restart               ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Log                                                             ";
-echo " [20] Monitoring log dari virtualhost                            ";
+echo " [20] Monitoring log dari domain / subdomain                     ";
 echo " [21] Monitoring log dari ip address                             ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " [22] Exit                                                       ";
