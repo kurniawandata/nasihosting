@@ -40,6 +40,7 @@ echo -n "Masukkan nama database yang akan dibuat untuk user yang akan dibuat : "
 read namadatabase
 sudo mysql -uroot -p$passmysql -e "CREATE DATABASE $namadatabase"
 sudo mysql -uroot -p$passmysql -e "GRANT ALL PRIVILEGES ON $namadatabase.* TO $namauser@localhost IDENTIFIED BY '$passdb'"
+sudo clear
 else
 echo "File img sudah ada"
 fi
