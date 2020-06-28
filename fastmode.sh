@@ -1,3 +1,8 @@
+
+#!/bin/bash
+#Progammer : Kurniawan. trainingxcode@gmail.com. xcode.or.id.
+#Program ini dapat digunakan untuk personal ataupun komersial.
+#X-code Media - xcode.or.id / xcodetraining.com
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
 echo "Nasihosting [Fast mode] - v1.0 Beta 32 "
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
