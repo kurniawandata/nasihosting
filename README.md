@@ -25,6 +25,8 @@ Cara menggunakan
 2. cd nasihosting
 3. chmod -R 777 *
 4. ./nasihosting.sh
+5. Jika sudah tidak ada masalah dengan nasihosting.sh, seperti sudah menggunakan PHP 7.4 dan sebagainya yang diperlukan maka bisa menggunakan fast mode, cara penggunaannya cukup ketik ./fastmode.sh
+
 
 Keterangan
 ----------
