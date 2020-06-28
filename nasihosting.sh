@@ -248,6 +248,7 @@ case $choice in
     read namadatabase
     sudo mysql -uroot -p$passmysql -e "CREATE DATABASE $namadatabase"
     sudo mysql -uroot -p$passmysql -e "GRANT ALL PRIVILEGES ON $namadatabase.* TO $namauser@localhost IDENTIFIED BY '$passdb'"
+    sudo clear
     ;;
 
 21) sudo tail -f /var/log/apache2/other_vhosts_access.log
