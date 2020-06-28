@@ -12,7 +12,7 @@ Jangan install PHP di bawah versi 7.4, jika punya server, pastikan install php 7
 
 File manager
 ------------
-File manager yang digunakan menggunakan Tiny File Manager dengan sumber dari https://github.com/prasathmani/tinyfilemanager
+File manager yang digunakan adalah Tiny File Manager dengan sumber dari https://github.com/prasathmani/tinyfilemanager
 
 Penggantian password cukup pada config.php
 
