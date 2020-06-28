@@ -3,7 +3,7 @@
 #Program ini dapat digunakan untuk personal ataupun komersial.
 #X-code Media - xcode.or.id / xcodetraining.com
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
-echo "Nasihosting [Fast mode] - v1.0 Beta 32 "
+echo "Nasihosting [Fast mode] - v1.0 Beta 33 "
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
 sudo ls -l /mnt/*
 echo -n "Masukkan nama file img - Jangan lupa tambahkan ekstensi img, misal akun1.img : "
