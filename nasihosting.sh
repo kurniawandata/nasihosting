@@ -9,7 +9,7 @@ clear
 echo "=================================================================";
 echo " Nasihosting for Apache Server (Ubuntu Server)                   ";
 echo " Progammer : Kurniawan. xcode.or.id                              ";
-echo " Version 1.0 Beta 32 - 28/06/2020                                ";
+echo " Version 1.0 Beta 33 - 29/06/2020                                ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Instalasi                                                       ";
 echo " [1]  Install PHP 7.4 dan salin phpinfo.php ke /var/www/html     ";
@@ -37,13 +37,15 @@ echo " [17] Buat file virtualhost, aktifkan, service apache2 restart   ";
 echo " [18] Hapus file virtualhost                                     ";
 echo " [19] Edit virtualhost dan service apache2 restart               ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
-echo " Log                                                             ";
-echo " [20] Monitoring log dari domain / subdomain                     ";
-echo " [21] Monitoring log dari ip address                             ";
+echo " MySQL                                                           ";
+echo " [20] Tambah user di MySQL dan buat databasenya                  ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
-echo " [22] Exit                                                       ";
+echo " [21] Monitoring log dari domain / subdomain                     ";
+echo " [22] Monitoring log dari ip address                             ";
+echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
+echo " [23] Exit                                                       ";
 echo "=================================================================";
-read -p " Masukkan Nomor Pilihan Anda antara [1 - 22] : " choice;
+read -p " Masukkan Nomor Pilihan Anda antara [1 - 23] : " choice;
 echo "";
 case $choice in
 
@@ -236,18 +238,30 @@ case $choice in
     fi
     ;;
 
-20) sudo tail -f /var/log/apache2/other_vhosts_access.log
+20) echo -n "Masukkan password root pada mysql : "
+    read passmysql
+    echo -n "Masukkan nama user akun mysql yang akan dibuat : "
+    read namauser
+    echo -n "Masukkan password untuk nama user akun mysql yang akan dibuat : "
+    read passdb
+    echo -n "Masukkan nama database yang akan dibuat untuk user yang akan dibuat : "
+    read namadatabase
+    sudo mysql -uroot -p$passmysql -e "CREATE DATABASE $namadatabase"
+    sudo mysql -uroot -p$passmysql -e "GRANT ALL PRIVILEGES ON $namadatabase.* TO $namauser@localhost IDENTIFIED BY '$passdb'"
     ;;
 
-21) sudo tail -f /var/log/apache2/access.log
+21) sudo tail -f /var/log/apache2/other_vhosts_access.log
     ;;
 
-22) exit
+22) sudo tail -f /var/log/apache2/access.log
+    ;;
+
+23) exit
     ;;
 *)    echo "Maaf, menu tidak ada"
 esac
 echo ""
-echo "Nasihosting for apache server (Ubuntu Server) - Beta 32"
+echo "Nasihosting for apache server (Ubuntu Server) - Beta 33"
 echo "Oleh Kurniawan - trainingxcode@gmail.com. xcode.or.id"
 echo ""
 echo -n "Kembali ke menu? [y/n]: ";
