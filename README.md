@@ -1,10 +1,15 @@
 # nasihosting
 
-Nasihosting v1.0 Beta 33
+Nasihosting v1.0 
 --------------------
 ![alt text](http://xcode.or.id/04_small-logo.png)
 
 Script untuk mendukung otomatisasi akun hosting dengan apache server di Ubuntu Server
+
+Full version
+------------
+Setelah melewati hingga Beta 33, Nasi hosting saat ini sudah full version
+
 
 Jangan menggunakan PHP di bawah versi 7.4
 -------------------------
