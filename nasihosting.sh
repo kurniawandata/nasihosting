@@ -9,7 +9,7 @@ clear
 echo "=================================================================";
 echo " Nasihosting for Apache Server (Ubuntu Server)                   ";
 echo " Progammer : Kurniawan. xcode.or.id                              ";
-echo " Version 1.0 - 02/07/2020                                        ";
+echo " Version 1.1 - 04/07/2020                                        ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Instalasi                                                       ";
 echo " [1]  Install PHP 7.4 dan salin phpinfo.php ke /var/www/html     ";
@@ -180,11 +180,11 @@ case $choice in
     if [[ ! $REPLY =~ ^[Nn]$ ]]
     then
     if [ -z "$(ls -l /etc/php/7.4/apache2/php.ini)" ]; then
+    echo "File php.ini tidak ada di /etc/php/7.4/apache2/php.ini"
+    else
     sudo cp /etc/php/7.4/apache2/php.ini /etc/php/7.4/apache2/phpini.backup
     sudo cp support/php.ini /etc/php/7.4/apache2
     sudo service apache2 restart
-    else
-    echo "File php.ini tidak ada di /etc/php/7.4/apache2/php.ini"
     fi
     fi
     ;;
