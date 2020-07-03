@@ -6,11 +6,6 @@ Nasihosting v1.1
 
 Script untuk mendukung otomatisasi akun hosting dengan apache server di Ubuntu Server
 
-Full version
-------------
-Setelah melewati hingga Beta 33, Nasi hosting saat ini sudah full version
-
-
 Jangan menggunakan PHP di bawah versi 7.4
 -------------------------
 Jangan install PHP di bawah versi 7.4, jika punya server, pastikan install php 7.4, instalasi PHP 7.4 sudah disertakan dalam program,  jika anda sudah pakai PHP versi sebelumnya maka lakukan remove dan pastikan nanti PHP 7.4 yang berjalan.
