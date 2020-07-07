@@ -50,7 +50,7 @@ GNU General Public License v3
 
 Program ini dibuat oleh :
 --------------------------------------------
-Kurniawan. trainingxcode@gmail.com.
+Kurniawan. kurniawan@xcodetraining.com.
 xcode.or.id
 
 
