@@ -1,5 +1,5 @@
 #!/bin/bash
-#Progammer : Kurniawan. trainingxcode@gmail.com. xcode.or.id.
+#Progammer : Kurniawan. kurniawan@xcodetraining.com. xcode.or.id.
 #Program ini dapat digunakan untuk personal ataupun komersial.
 #X-code Media - xcode.or.id / xcodetraining.com
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
