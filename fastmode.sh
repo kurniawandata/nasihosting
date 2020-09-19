@@ -26,7 +26,7 @@ sudo chown www-data.www-data /home/$namasubdomain
 sudo chown www-data.www-data -R /home/$namasubdomain/*
 echo -n "Masukkan password file manager : "
 read passlogin
-sed -i "s/unik/$passlogin/g" /home/$name/config.php
+sed -i "s/gantipasswordnya/$passlogin/g" /home/$name/config.php
 echo "Installasi virtualhost dengan domain.."
 sudo cp support/subdomain.conf /etc/apache2/sites-available/$namasubdomain.conf
 sudo nano /etc/apache2/sites-available/$namasubdomain.conf
