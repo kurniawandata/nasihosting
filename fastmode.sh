@@ -3,7 +3,7 @@
 #Program ini dapat digunakan untuk personal ataupun komersial.
 #X-code Media - xcode.or.id / xcodetraining.com
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
-echo "Nasihosting [Fast mode] - v1.0         "
+echo "Nasihosting [Fast mode] - v1.2         "
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
 sudo ls -l /mnt/*
 echo -n "Masukkan nama file img - Jangan lupa tambahkan ekstensi img, misal akun1.img : "
@@ -13,7 +13,7 @@ echo -n "Masukkan nama sub domain : "
 read namasubdomain
 if [ -z "$(ls -A /mnt/$img)" ]; then
 echo "Buat img.."
-sudo dd if=/dev/zero of=/mnt/$img bs=1024 count=100000
+sudo dd if=/dev/zero of=/mnt/$img bs=1024 count=150000
 sudo mkdir -p /home/$namasubdomain
 sudo mkfs.ext4 /mnt/$img
 sudo mount -o loop /mnt/$img /home/$namasubdomain
@@ -24,7 +24,9 @@ sudo cp filemanager/* /home/$namasubdomain
 sudo chmod -R 777 /home/$namasubdomain  
 sudo chown www-data.www-data /home/$namasubdomain  
 sudo chown www-data.www-data -R /home/$namasubdomain/*
-sudo nano /home/$namasubdomain/config.php
+echo -n "Masukkan password file manager : "
+read passlogin
+sed -i "s/unik/$passlogin/g" /home/$name/config.php
 echo "Installasi virtualhost dengan domain.."
 sudo cp support/subdomain.conf /etc/apache2/sites-available/$namasubdomain.conf
 sudo nano /etc/apache2/sites-available/$namasubdomain.conf
