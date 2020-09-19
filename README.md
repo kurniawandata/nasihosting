@@ -1,6 +1,6 @@
 # nasihosting
 
-Nasihosting v1.1
+Nasihosting v1.2
 --------------------
 ![alt text](http://xcode.or.id/04_small-logo.png)
 
@@ -16,7 +16,7 @@ File manager yang digunakan adalah Tiny File Manager dengan sumber dari https://
 
 Penggantian password cukup pada config.php
 
-Untuk generate password :
+Untuk generate password pada sistem lama sebelum versi 1.2:
 https://tinyfilemanager.github.io/docs/pwd.html
 
 Cara menggunakan
