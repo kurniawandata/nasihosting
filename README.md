@@ -16,7 +16,7 @@ File manager yang digunakan adalah Tiny File Manager dengan sumber dari https://
 
 Penggantian password cukup pada config.php
 
-Untuk generate password pada sistem lama sebelum versi 1.2:
+Untuk generate password pada sistem lama sebelum versi 1.2 :
 https://tinyfilemanager.github.io/docs/pwd.html
 
 Cara menggunakan
@@ -30,7 +30,7 @@ Cara menggunakan
 
 Keterangan
 ----------
-1. Di script ini default-nya membuat file ekstensi img 100 MB jika ingin mengubah, bisa edit scriptnya
+1. Di script ini default-nya membuat file ekstensi img 150 MB jika ingin mengubah, bisa edit scriptnya
 1. Saat masuk di /etc/fstab, masukkan : /mnt/namafile.img /home/sample ext4 loop 1 2 (namafile.img bisa diganti bebas namanya asal ada ekstensi img)
 3. Kata sample di atas bisa diganti dengan nama sub domain yang akan dibuat
 4. Di virtualhost ganti sample dengan melakukan find dan replace all dengan nama sub domain yang akan dibuat (Jika di linux pakai nano bisa menggunakan ctrl + backslash)
