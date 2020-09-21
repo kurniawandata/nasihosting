@@ -3,7 +3,7 @@
 #Program ini dapat digunakan untuk personal ataupun komersial.
 #X-code Media - xcode.or.id / xcodetraining.com
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
-echo "Nasihosting [Fast mode] - v1.3         "
+echo "Nasihosting [Fast mode] - v1.4         "
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
 sudo ls -l /mnt/*
 echo -n "Masukkan nama file img - Jangan lupa tambahkan ekstensi img, misal akun1.img : "
@@ -17,7 +17,7 @@ sudo dd if=/dev/zero of=/mnt/$img bs=1024 count=150000
 sudo mkdir -p /home/$namasubdomain
 sudo mkfs.ext4 /mnt/$img
 sudo mount -o loop /mnt/$img /home/$namasubdomain
-sudo nano /etc/fstab
+sed -i -e '$a/mnt/'$img' /home/'$namasubdomain' ext4 loop 1 2' /etc/fstab
 echo "Salin file manager.."    
 sudo rmdir /home/$namasubdomain/lost+found
 sudo cp filemanager/* /home/$namasubdomain
