@@ -29,7 +29,7 @@ read passlogin
 sed -i "s/gantipasswordnya/$passlogin/g" /home/$namasubdomain/config.php
 echo "Installasi virtualhost dengan domain.."
 sudo cp support/subdomain.conf /etc/apache2/sites-available/$namasubdomain.conf
-sed -i "s/sample/$namasubdomain/g" /etc/apache2/sites-available/$name.conf
+sed -i "s/sample/$namasubdomain/g" /etc/apache2/sites-available/$namasubdomain.conf
 sudo a2ensite $namasubdomain.conf
 sudo service apache2 restart
 echo -n "Masukkan password root pada mysql : "
