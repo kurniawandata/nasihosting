@@ -25,7 +25,7 @@ sudo chmod -R 777 /home/$namasubdomain
 sudo chown www-data.www-data /home/$namasubdomain  
 sudo chown www-data.www-data -R /home/$namasubdomain/*
 echo -n "Masukkan password file manager : "
-read passlogin
+read -s passlogin
 sed -i "s/gantipasswordnya/$passlogin/g" /home/$namasubdomain/config.php
 echo "Installasi virtualhost dengan domain.."
 sudo cp support/subdomain.conf /etc/apache2/sites-available/$namasubdomain.conf
@@ -33,11 +33,11 @@ sed -i "s/sample/$namasubdomain/g" /etc/apache2/sites-available/$namasubdomain.c
 sudo a2ensite $namasubdomain.conf
 sudo service apache2 restart
 echo -n "Masukkan password root pada mysql : "
-read passmysql
+read -s passmysql
 echo -n "Masukkan nama user akun mysql yang akan dibuat : "
 read namauser
 echo -n "Masukkan password untuk nama user akun mysql yang akan dibuat : "
-read passdb
+read -s passdb
 echo -n "Masukkan nama database yang akan dibuat untuk user yang akan dibuat : "
 read namadatabase
 sudo mysql -uroot -p$passmysql -e "CREATE DATABASE $namadatabase"
