@@ -28,7 +28,7 @@ Cara menggunakan
 5. cd nasihosting
 6. chmod -R 777 *
 7. ./nasihosting.sh
-8. Jika sudah tidak ada masalah dengan nasihosting.sh, seperti sudah menggunakan PHP 7.4 dan sebagainya yang diperlukan maka bisa menggunakan fast mode untuk membuat akun hosting, cara penggunaannya cukup ketik ./fastmode.sh lalu enter (Jangan lupa jika tidak ingin menggunakan default storage untuk client 150 MB maka edit programnya).
+8. Jika sudah tidak ada masalah dengan nasihosting.sh, seperti sudah menggunakan PHP 7.4 dan sebagainya yang diperlukan maka bisa menggunakan fast mode untuk membuat akun hosting, cara penggunaannya cukup ketik ./fastmode.sh lalu enter (Jangan lupa jika tidak ingin menggunakan default storage untuk client 125.62 MB (150 MB di program) maka edit programnya).
 
 
 Keterangan
