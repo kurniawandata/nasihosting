@@ -114,8 +114,8 @@ case $choice in
     sudo rmdir /home/$namasubdomain/lost+found
     sudo cp filemanager/* /home/$namasubdomain
     sudo chmod -R 777 /home/$namasubdomain  
-    sudo chown www-data.www-data /home/$namasubdomain  
-    sudo chown www-data.www-data -R /home/$namasubdomain/*
+    sudo chown www-data.root /home/$namasubdomain  
+    sudo chown www-data.root -R /home/$namasubdomain/*
     else
     echo "Anda belum buat folder dengan nama sub domain tersebut"
     fi
