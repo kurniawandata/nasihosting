@@ -22,8 +22,8 @@ echo "Salin file manager.."
 sudo rmdir /home/$namasubdomain/lost+found
 sudo cp filemanager/* /home/$namasubdomain
 sudo chmod -R 777 /home/$namasubdomain  
-sudo chown www-data.www-data /home/$namasubdomain  
-sudo chown www-data.www-data -R /home/$namasubdomain/*
+sudo chown www-data.root /home/$namasubdomain  
+sudo chown www-data.root -R /home/$namasubdomain/*
 echo -n "Masukkan password file manager : "
 read passlogin
 sed -i "s/gantipasswordnya/$passlogin/g" /home/$namasubdomain/config.php
