@@ -1,6 +1,6 @@
 # nasihosting
 
-Nasihosting v1.9
+Nasihosting v2.0
 --------------------
 ![alt text](http://xcode.or.id/04_small-logo.png)
 
