@@ -23,7 +23,7 @@ echo " [7]  Cek isi folder client hosting                              ";
 echo " [8]  Salin file manager pada folder untuk client hosting serta  ";
 echo "      pengaturan hak aksesnya                                    ";
 echo " [9]  Edit file /etc/fstab                                       ";
-echo " [10]  Edit password untuk login client                           ";
+echo " [10] Edit password untuk login client                           ";
 echo " [11] Cek mount                                                  ";
 echo " [12] Umount file img dan edit /etc/fstab                        ";
 echo " [13] Hapus data file img                                        ";
