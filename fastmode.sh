@@ -9,7 +9,7 @@ sudo ls -l /mnt/*
 echo -n "Masukkan nama file img - Jangan lupa tambahkan ekstensi img, misal akun1.img : "
 read img
 if [[ $img =~ \.img$ ]]; then
-echo -n "Masukkan sub domain : "
+echo -n "Masukkan nama sub domain : "
 read namasubdomain
 if [ -z "$(ls -A /mnt/$img)" ]; then
 echo "Buat img.."
