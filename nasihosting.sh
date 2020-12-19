@@ -12,7 +12,8 @@ echo " Progammer : Kurniawan. xcode.or.id                              ";
 echo " Version 2.0 - 14/12/2020                                        ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Instalasi                                                       ";
-echo " [1]  Install PHP 7.4 dan salin phpinfo.php ke /var/www/html     ";
+echo " [1]  Install PHP 7.4, salin phpinfo.php ke /var/www/html dan    ";
+echo "      install MySQL Server                                       ";
 echo " [2]  Aktifkan /home untuk virtualhost client, zip unzip php-zip,";
 echo " [3]  Lihat daftar file img di /mnt                              ";
 echo " [4]  Cek folder untuk client hosting di /home                   ";
@@ -56,6 +57,11 @@ case $choice in
     sudo apt-get update
     sudo apt -y install php7.4
     sudo cp support/phpinfo.php /var/www/html
+    sudo apt install mysql-server
+    echo -n "Masukkan password root yang akan dibuat : "
+    read passmysql
+    sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '$passmysql';" 
+    sudo clear
     service apache2 restart
     read -p "Tekan enter untuk restart, setelah restart cek phpinfo.php di browser, bisa dipanggil lewat ip address/phpinfo.php"
     ;;
@@ -87,7 +93,7 @@ case $choice in
     read namasubdomain
     if [ -z "$(ls -A /mnt/$img)" ]; then
     echo "Buat img.."
-    sudo dd if=/dev/zero of=/mnt/$img bs=1024 count=100000
+    sudo dd if=/dev/zero of=/mnt/$img bs=1024 count=150000
     sudo mkdir -p /home/$namasubdomain
     sudo mkfs.ext4 /mnt/$img
     sudo mount -o loop /mnt/$img /home/$namasubdomain
