@@ -21,14 +21,12 @@ https://tinyfilemanager.github.io/docs/pwd.html
 
 Cara menggunakan
 ----------------
-1. apt install apache2
-2. apt install mysql-server
-3. mysql lalu enter, lalu diisi : ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'passwordroot';
-4. git clone https://github.com/kurniawandata/nasihosting
-5. cd nasihosting
-6. chmod -R 777 *
-7. ./nasihosting.sh
-8. Jika sudah tidak ada masalah dengan nasihosting.sh, seperti sudah menggunakan PHP 7.4 dan sebagainya yang diperlukan maka bisa menggunakan fast mode untuk membuat akun hosting, cara penggunaannya cukup ketik ./fastmode.sh lalu enter (Jangan lupa jika tidak ingin menggunakan default storage untuk client 125.62 MB (150 MB di program) maka edit programnya).
+1. git clone https://github.com/kurniawandata/nasihosting
+2. cd nasihosting
+3. chmod -R 777 *
+4. ./nasihosting.sh
+5. Lakukan instalasi yang dibutuhkan sesuai menu
+6. Jika sudah tidak ada masalah dengan nasihosting.sh, seperti sudah menggunakan PHP 7.4 dan sebagainya yang diperlukan maka bisa menggunakan fast mode untuk membuat akun hosting, cara penggunaannya cukup ketik ./fastmode.sh lalu enter (Jangan lupa jika tidak ingin menggunakan default storage untuk client 125.62 MB (150 MB di program) maka edit programnya).
 
 
 Keterangan
