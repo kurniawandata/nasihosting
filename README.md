@@ -29,21 +29,16 @@ Cara menggunakan
 6. Jika sudah tidak ada masalah dengan nasihosting.sh, seperti sudah menggunakan PHP 7.4 dan sebagainya yang diperlukan maka bisa menggunakan fast mode untuk membuat akun hosting, cara penggunaannya cukup ketik ./fastmode.sh lalu enter (Jangan lupa jika tidak ingin menggunakan default storage untuk client 125.62 MB (150 MB di program) maka edit programnya).
 
 
-Keterangan
+Keterangan untuk non fastmode
 ----------
 1. Di script ini default-nya membuat file ekstensi img 150 MB jika ingin mengubah, bisa edit scriptnya
-1. Saat masuk di /etc/fstab, masukkan : /mnt/namafile.img /home/sample ext4 loop 1 2 (namafile.img bisa diganti bebas namanya asal ada ekstensi img)
+2. Saat masuk di /etc/fstab, masukkan : /mnt/namafile.img /home/sample ext4 loop 1 2 (namafile.img bisa diganti bebas namanya asal ada ekstensi img)
 3. Kata sample di atas bisa diganti dengan nama sub domain yang akan dibuat
 4. Di virtualhost ganti sample dengan melakukan find dan replace all dengan nama sub domain yang akan dibuat (Jika di linux pakai nano bisa menggunakan ctrl + backslash)
 
 Script ini telah diimplementasi
 -------------------------------
 Anda bisa mengakses nasihosting di https://nasihosting.com
-
-Demo video
-----------
-https://www.youtube.com/watch?v=sbM_NbdWWeg
-
 
 Licensi
 -------
