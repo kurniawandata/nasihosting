@@ -14,19 +14,19 @@ echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Instalasi                                                       ";
 echo " [1]  Install PHP 7.4, salin phpinfo.php ke /var/www/html dan    ";
 echo "      install MySQL Server                                       ";
-echo " [2]  Aktifkan /home untuk virtualhost client, zip unzip php-zip,";
-echo " [3]  Lihat daftar file img di /mnt                              ";
-echo " [4]  Cek folder untuk client hosting di /home                   ";
-echo " [5]  Buat file img, mount, edit /etc/fstab/                     ";
-echo " [6]  Cek isi folder client hosting                              ";
-echo " [7]  Salin file manager pada folder untuk client hosting serta  ";
+echo " [2]  Install phpmyadmin 5.0.4 (Kompatible dengan PHP 7.4)       ";
+echo " [3]  Aktifkan /home untuk virtualhost client, zip unzip php-zip,";
+echo " [4]  Lihat daftar file img di /mnt                              ";
+echo " [5]  Cek folder untuk client hosting di /home                   ";
+echo " [6]  Buat file img, mount, edit /etc/fstab/                     ";
+echo " [7]  Cek isi folder client hosting                              ";
+echo " [8]  Salin file manager pada folder untuk client hosting serta  ";
 echo "      pengaturan hak aksesnya                                    ";
-echo " [8]  Edit file /etc/fstab                                       ";
-echo " [9]  Edit password untuk login client                           ";
-echo " [10] Cek mount                                                  ";
-echo " [11] Umount file img dan edit /etc/fstab                        ";
-echo " [12] Hapus data file img                                        ";
-echo " [13] Install phpmyadmin 5.0.4 (Kompatible dengan PHP 7.4)       ";
+echo " [9]  Edit file /etc/fstab                                       ";
+echo " [10]  Edit password untuk login client                           ";
+echo " [11] Cek mount                                                  ";
+echo " [12] Umount file img dan edit /etc/fstab                        ";
+echo " [13] Hapus data file img                                        ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Aktifkan pengamanan dari remote shell PHP Shell                 ";
 echo " [14] Cek php.ini di PHP 7.4 (/etc/apache2/php7.4/apache/php.ini)";
@@ -66,17 +66,26 @@ case $choice in
     read -p "Tekan enter untuk restart, setelah restart cek phpinfo.php di browser, bisa dipanggil lewat ip address/phpinfo.php"
     ;;
 
-2)  echo "Aktifkan /home.."
+2) sudo apt install phpmyadmin
+    sudo mv /usr/share/phpmyadmin/ /usr/share/phpmyadmin.bak
+    sudo mkdir /usr/share/phpmyadmin/
+    sudo wget https://files.phpmyadmin.net/phpMyAdmin/5.0.4/phpMyAdmin-5.0.4-all-languages.tar.gz
+    sudo tar xzf phpMyAdmin-5.0.4-all-languages.tar.gz
+    sudo mv phpMyAdmin-5.0.4-all-languages/* /usr/share/phpmyadmin
+    cp support/vendor_config.php /usr/share/phpmyadmin/libraries/
+    ;;
+
+3)  echo "Aktifkan /home.."
     sudo cp /etc/apache2/apache2.conf backup
     sudo cp support/apache2.conf /etc/apache2/
     sudo apt-get install zip unzip php-zip
     service apache2 restart
     ;;
 
-3)  sudo ls -l /mnt/
+4)  sudo ls -l /mnt/
     ;;
 
-4)  echo -n "Masukkan nama sub domain "
+5)  echo -n "Masukkan nama sub domain "
     read namasubdomain
     if [ -z "$(ls -A /home/$namasubdomain/*)" ]; then
     echo "folder untuk sub domain yang anda masukkan belum ada"
@@ -85,7 +94,7 @@ case $choice in
     fi
     ;;   
 
-5)  sudo ls -l /mnt/*
+6)  sudo ls -l /mnt/*
     echo -n "Masukkan nama file img - Jangan lupa tambahkan ekstensi img, misal akun1.img : "
     read img
     if [[ $img =~ \.img$ ]]; then
@@ -105,7 +114,7 @@ case $choice in
     echo "Anda lupa memasukkan ekstensi img"
     fi
     ;;
-6)  echo -n "Masukkan alamat sub domain : "
+7)  echo -n "Masukkan alamat sub domain : "
     read namasubdomain
     if [ -z "$(ls -A /home/$namasubdomain/*)" ]; then
     echo "Anda belum buat folder dengan nama sub domain tersebut"
@@ -114,7 +123,7 @@ case $choice in
     fi
     ;;
 
-7)  echo -n "Masukkan alamat sub domain : "
+8)  echo -n "Masukkan alamat sub domain : "
     read namasubdomain
     if [ -z "$(ls -A /home/$namasubdomain/*)" ]; then
     sudo rmdir /home/$namasubdomain/lost+found
@@ -128,10 +137,10 @@ case $choice in
     ;;
 
 
-8)  sudo nano /etc/fstab
+9)  sudo nano /etc/fstab
     ;;
 
-9)  echo -n "Masukkan alamat sub domain : "
+10)  echo -n "Masukkan alamat sub domain : "
     read namasubdomain
     if [ -z "$(ls -A /home/$namasubdomain/*)" ]; then
     echo "Anda belum buat folder dengan nama sub domain tersebut"
@@ -141,10 +150,10 @@ case $choice in
     ;;
 
 
-10)  sudo mount
+11)  sudo mount
     ;;
 
-11)  sudo ls -l /mnt/*
+12)  sudo ls -l /mnt/*
     echo -n "Masukkan nama file img - Jangan lupa tambahkan ekstensi img, misal akun1.img : "
     read img
     echo -n "Masukkan nama sub domain : "
@@ -158,7 +167,7 @@ case $choice in
     fi
     ;;
 
-12) read -p "Apakah anda yakin akan menghapus file img client ? y/n :" -n 1 -r
+13) read -p "Apakah anda yakin akan menghapus file img client ? y/n :" -n 1 -r
     echo  ""
     if [[ ! $REPLY =~ ^[Nn]$ ]]
     then
@@ -172,15 +181,6 @@ case $choice in
     echo "File img sudah dihapus"
     fi
     fi
-    ;;
-
-13) sudo apt install phpmyadmin
-    sudo mv /usr/share/phpmyadmin/ /usr/share/phpmyadmin.bak
-    sudo mkdir /usr/share/phpmyadmin/
-    sudo wget https://files.phpmyadmin.net/phpMyAdmin/5.0.4/phpMyAdmin-5.0.4-all-languages.tar.gz
-    sudo tar xzf phpMyAdmin-5.0.4-all-languages.tar.gz
-    sudo mv phpMyAdmin-5.0.4-all-languages/* /usr/share/phpmyadmin
-    cp support/vendor_config.php /usr/share/phpmyadmin/libraries/
     ;;
 
 14) if [ -z "$(ls -l /etc/php/7.4/apache2/php.ini)" ]; then
