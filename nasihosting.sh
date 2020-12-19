@@ -16,7 +16,7 @@ echo " [1]  Install PHP 7.4, salin phpinfo.php ke /var/www/html dan    ";
 echo "      install MySQL Server                                       ";
 echo " [2]  Install phpmyadmin 5.0.4 (Kompatible dengan PHP 7.4)       ";
 echo " [3]  Aktifkan /home untuk virtualhost client, zip unzip php-zip ";
-echo "      dan ganti subdomain.conf jika ingin mengganti domain       ";
+echo "      dan ganti domain nasihosting.com                           ";
 echo " [4]  Lihat daftar file img di /mnt                              ";
 echo " [5]  Cek folder untuk client hosting di /home                   ";
 echo " [6]  Buat file img, mount, edit /etc/fstab/                     ";
