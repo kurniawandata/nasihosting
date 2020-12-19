@@ -15,7 +15,8 @@ echo " Instalasi                                                       ";
 echo " [1]  Install PHP 7.4, salin phpinfo.php ke /var/www/html dan    ";
 echo "      install MySQL Server                                       ";
 echo " [2]  Install phpmyadmin 5.0.4 (Kompatible dengan PHP 7.4)       ";
-echo " [3]  Aktifkan /home untuk virtualhost client, zip unzip php-zip,";
+echo " [3]  Aktifkan /home untuk virtualhost client, zip unzip php-zip ";
+echo "      dan ganti domain nasihosting.com                           ";
 echo " [4]  Lihat daftar file img di /mnt                              ";
 echo " [5]  Cek folder untuk client hosting di /home                   ";
 echo " [6]  Buat file img, mount, edit /etc/fstab/                     ";
@@ -79,6 +80,7 @@ case $choice in
     sudo cp /etc/apache2/apache2.conf backup
     sudo cp support/apache2.conf /etc/apache2/
     sudo apt-get install zip unzip php-zip
+    sudo nano support/subdomain2.conf
     service apache2 restart
     ;;
 
