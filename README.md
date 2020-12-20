@@ -1,6 +1,6 @@
 # nasihosting
 
-Nasihosting v2.3
+Nasihosting v2.5
 --------------------
 ![alt text](http://xcode.or.id/04_small-logo.png)
 
@@ -24,9 +24,18 @@ Cara menggunakan
 1. git clone https://github.com/kurniawandata/nasihosting
 2. cd nasihosting
 3. chmod -R 777 *
-4. ./nasihosting.sh
-5. Lakukan instalasi yang dibutuhkan sesuai menu
+4. ./nasihosting.sh (Mendukung https tapi harus sudah mempunyai sertifikat SSL, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04)
+   ./nasihosting-http-only (Hanya mendukung http, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04) 
+   ./nasihosting-ubuntu20.04.sh (Mendukung https tapi harus sudah mempunyai sertifikat SSL, mendukung Ubuntu Server 20.04)
+   ./nasihosting-httponly-ubuntu20.04.sh (Hanya mendukung http, mendukung Ubuntu Server 20.04) 
 6. Jika sudah tidak ada masalah dengan nasihosting.sh, seperti sudah menggunakan PHP 7.4 dan sebagainya yang diperlukan maka bisa menggunakan fast mode untuk membuat akun hosting, cara penggunaannya cukup ketik ./fastmode.sh lalu enter (Jangan lupa jika tidak ingin menggunakan default storage untuk client 125.62 MB (150 MB di program) maka edit programnya).
+   ./fastmode.sh (Mendukung https tapi harus sudah mempunyai sertifikat SSL, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04, bisa custom nama user mysql dan database tapi tidak aman jika digabung dengan nasihosting extension-pack)
+   ./fastmode2.sh (Hanya mendukung http, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04, bisa custom nama user mysql dan database tapi tidak aman jika digabung dengan nasihosting extension-pack) 
+   ./fastmode-ubuntu20.04.sh ((Mendukung https tapi harus sudah mempunyai sertifikat SSL, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04, tidak support nasihosting extension pack) 
+
+Kompatibilitas
+--------------
+Nasihosting-extension tidak mendukung MySQL baru di Ubuntu Server 20.04 sehingga pilihan distro linux terbaik untuk nasihosting adalah Ubuntu Server 18.04.5, karena support nasihosting-extensionpack.
 
 
 Keterangan untuk non fastmode
