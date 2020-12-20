@@ -32,7 +32,7 @@ Cara menggunakan
    
    ./nasihosting-httponly-ubuntu20.04.sh (Hanya mendukung http, mendukung Ubuntu Server 20.04) 
    
-5. Jalankan perintah 1,2,3 dan 15 lalu masuk ke fastmode atau install nasihosting-extensionpack jika ingin otomatis menambah dari website dan storage-nya share.
+5. Jalankan perintah 1,2,3 dan 15 lalu masuk ke fastmode atau install nasihosting-extensionpack jika ingin otomatis menambah pengguna hosting dari website dan storage-nya share.
 
    ./fastmode.sh (Mendukung https tapi harus sudah mempunyai sertifikat SSL, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04, bisa custom nama user mysql dan database tapi tidak aman jika digabung dengan nasihosting extension-pack)
 
