@@ -50,7 +50,7 @@ Nasihosting-extensionpack tidak mendukung MySQL Server dari Ubuntu Server 20.04 
 
 Keamanan
 --------
-Jangan pernah menggabungakan fastmode dengan nasihosting-extensionpack, kecuali menggunakan fastmode2
+Jangan pernah menggabungkan fastmode dengan nasihosting-extensionpack, kecuali menggunakan fastmode2
 
 
 Keterangan untuk non fastmode
