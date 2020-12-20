@@ -54,6 +54,9 @@ Non fastmode yaitu mode di mana semuanya semi manual hingga manual, ditujukan un
 1. Di script ini default-nya membuat file ekstensi img 150 MB jika ingin mengubah, bisa edit scriptnya
 2. Jika pakai domain, bukan subdomain maka di virtualhost ganti alamatnya dengan domain baru dengan melakukan find dan replace all dengan domain yang akan dibuat (Jika di linux pakai nano bisa menggunakan ctrl + backslash)
 
+Aktivasi https
+--------------
+Pastikan mempunyai sertifikat SSL, jika sudah punya, jalankan perintah ./aktifkanhttps.sh lalu enter
 
 Script ini telah diimplementasi
 -------------------------------
