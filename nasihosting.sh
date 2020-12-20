@@ -58,6 +58,9 @@ case $choice in
     sudo apt-get update
     sudo apt -y install php7.4
     sudo cp support/phpinfo.php /var/www/html
+    sudo a2enmod ssl
+    sudo mkdir /etc/apache2/ssl
+    sudo chmod 777 /etc/pache2/ssl
     sudo apt install mysql-server
     echo -n "Masukkan password root yang akan dibuat : "
     read passmysql
@@ -232,6 +235,8 @@ case $choice in
     sudo cp support/subdomain.conf /etc/apache2/sites-available/$namasubdomain.conf
     sudo nano /etc/apache2/sites-available/$namasubdomain.conf
     sudo a2ensite $namasubdomain.conf
+    sudo nano /etc/apache2/ssl/nasihosting.com.pem
+    sudo nano /etc/apache2/ssl/nasihosting.com.key
     sudo service apache2 restart
     else
     echo "Sub domain yang anda masukkan sudah ada"
