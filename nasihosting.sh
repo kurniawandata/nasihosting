@@ -9,7 +9,7 @@ clear
 echo "=================================================================";
 echo " Nasihosting for Apache Server (Ubuntu Server)                   ";
 echo " Progammer : Kurniawan. xcode.or.id                              ";
-echo " Version 2.3 - 20/12/2020                                        ";
+echo " Version 2.5 - 20/12/2020                                        ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Instalasi                                                       ";
 echo " [1]  Install PHP 7.4, salin phpinfo.php ke /var/www/html dan    ";
@@ -267,8 +267,6 @@ case $choice in
     read namadatabase
     sudo mysql -uroot -p$passmysql -e "CREATE DATABASE $namadatabase"
     sudo mysql -uroot -p$passmysql -e "GRANT ALL PRIVILEGES ON $namadatabase.* TO $namauser@localhost IDENTIFIED BY '$passdb'"
-    sudo mysql -uroot -p$passmysql -e "CREATE USER '$namauser'@'localhost' IDENTIFIED BY '$passdb';"
-    sudo mysql -uroot -p$passmysql -e "GRANT ALL PRIVILEGES ON $namadatabase.* TO '$namauser'@'localhost' WITH GRANT OPTION;"
     sudo clear
     ;;
 
