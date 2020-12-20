@@ -80,7 +80,9 @@ case $choice in
     sudo cp /etc/apache2/apache2.conf backup
     sudo cp support/apache2.conf /etc/apache2/
     sudo apt-get install zip unzip php-zip
-    sudo nano support/subdomain2.conf
+    echo -n "Masukkan nama domain : "
+    read domain
+    sed -i "s/nasihosting.com/$domain/g" support/subdomain2.conf
     service apache2 restart
     ;;
 
