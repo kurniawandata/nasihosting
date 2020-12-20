@@ -26,7 +26,7 @@ Cara menggunakan
 3. chmod -R 777 *
 4. ./nasihosting.sh (Mendukung https tapi harus sudah mempunyai sertifikat SSL, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04)
 
-   ./nasihosting-httponly (Hanya mendukung http, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04) 
+   ./nasihosting-httponly.sh (Hanya mendukung http, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04) 
    
    ./nasihosting-ubuntu20.04.sh (Mendukung https tapi harus sudah mempunyai sertifikat SSL, mendukung Ubuntu Server 20.04)
    
