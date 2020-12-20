@@ -35,11 +35,15 @@ Cara menggunakan
 6. Jika sudah tidak ada masalah dengan nasihosting.sh, seperti sudah menggunakan PHP 7.4 dan sebagainya yang diperlukan maka bisa menggunakan fast mode untuk membuat akun hosting, cara penggunaannya cukup ketik ./fastmode.sh lalu enter (Jangan lupa jika tidak ingin menggunakan default storage untuk client 125.62 MB (150 MB di program) maka edit programnya).
 
    ./fastmode.sh (Mendukung https tapi harus sudah mempunyai sertifikat SSL, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04, bisa custom nama user mysql dan database tapi tidak aman jika digabung dengan nasihosting extension-pack)
-   
-   ./fastmode2.sh (Hanya mendukung http, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04, bisa custom nama user mysql dan database tapi tidak aman jika digabung dengan nasihosting extension-pack) 
-   
-   ./fastmode-ubuntu20.04.sh (Mendukung https tapi harus sudah mempunyai sertifikat SSL, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04, tidak support nasihosting extension pack) 
 
+   ./fastmode-http.sh (Hanya mendukung http, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04, bisa custom nama user mysql dan database tapi tidak aman jika digabung dengan nasihosting extension-pack)
+
+   ./fastmode2.sh (Mendukung https tapi harus sudah mempunyai sertifikat SSL, bisa custom nama user mysql dan database dan aman jika digabung dengan nasihosting extension-pack) 
+
+   ./fastmode2-httponly.sh (Hanya mendukung http, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04, bisa custom nama user mysql dan database dan aman jika digabung dengan nasihosting extension-pack) 
+
+   ./fastmode-ubuntu20.04.sh (Mendukung https tapi harus sudah mempunyai sertifikat SSL, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04, tidak support nasihosting extension pack) 
+   
 Kompatibilitas
 --------------
 Nasihosting-extension tidak mendukung MySQL baru di Ubuntu Server 20.04 sehingga pilihan distro linux terbaik untuk nasihosting adalah Ubuntu Server 18.04.5, karena support nasihosting-extensionpack.
