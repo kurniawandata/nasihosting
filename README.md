@@ -46,7 +46,7 @@ Cara menggunakan
    
 Kompatibilitas
 --------------
-Nasihosting-extension tidak mendukung MySQL Server dari Ubuntu Server 20.04 sehingga pilihan distro linux terbaik untuk nasihosting adalah Ubuntu Server 18.04.5 atau Ubuntu 16.04.7, karena support nasihosting-extensionpack.
+Nasihosting-extensionpack tidak mendukung MySQL Server dari Ubuntu Server 20.04 sehingga pilihan distro linux terbaik untuk nasihosting adalah Ubuntu Server 18.04.5 atau Ubuntu 16.04.7, karena support nasihosting-extensionpack.
 
 
 Keterangan untuk non fastmode
