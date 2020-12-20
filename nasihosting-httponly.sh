@@ -267,6 +267,8 @@ case $choice in
     read namadatabase
     sudo mysql -uroot -p$passmysql -e "CREATE DATABASE $namadatabase"
     sudo mysql -uroot -p$passmysql -e "GRANT ALL PRIVILEGES ON $namadatabase.* TO $namauser@localhost IDENTIFIED BY '$passdb'"
+    sudo mysql -uroot -p$passmysql -e "CREATE USER '$namauser'@'localhost' IDENTIFIED BY '$passdb';"
+    sudo mysql -uroot -p$passmysql -e "GRANT ALL PRIVILEGES ON $namadatabase.* TO '$namauser'@'localhost' WITH GRANT OPTION;"
     sudo clear
     ;;
 
