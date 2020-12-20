@@ -47,6 +47,7 @@ Nasihosting-extension tidak mendukung MySQL baru di Ubuntu Server 20.04 sehingga
 
 Keterangan untuk non fastmode
 ----------
+Non fastmode yaitu mode di mana semuanya semi manual hingga manual.
 1. Di script ini default-nya membuat file ekstensi img 150 MB jika ingin mengubah, bisa edit scriptnya
 2. Saat masuk di /etc/fstab, masukkan : /mnt/namafile.img /home/sample ext4 loop 1 2 (namafile.img bisa diganti bebas namanya asal ada ekstensi img)
 3. Kata sample di atas bisa diganti dengan nama sub domain yang akan dibuat
