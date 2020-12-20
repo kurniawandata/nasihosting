@@ -36,8 +36,8 @@ echo -n "Masukkan password root pada mysql : "
 read passmysql
 sudo mysql -uroot -p$passmysql -e "CREATE DATABASE $namasubdomain"
 sudo mysql -uroot -p$passmysql -e "GRANT ALL PRIVILEGES ON $namasubdomain.* TO $namasubdomain@localhost IDENTIFIED BY '$passlogin'"
-sudo mysql -uroot -p$passmysql -e "CREATE USER '$namauser'@'localhost' IDENTIFIED BY '$passdb';"
-sudo mysql -uroot -p$passmysql -e "GRANT ALL PRIVILEGES ON $namadatabase.* TO '$namauser'@'localhost' WITH GRANT OPTION;"
+sudo mysql -uroot -p$passmysql -e "CREATE USER '$namasubdomain'@'localhost' IDENTIFIED BY '$passlogin';"
+sudo mysql -uroot -p$passmysql -e "GRANT ALL PRIVILEGES ON $namasubdomain.* TO '$namasubdomain'@'localhost' WITH GRANT OPTION;"
 sudo clear
 else
 echo "File img sudah ada"
