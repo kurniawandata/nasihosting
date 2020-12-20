@@ -55,11 +55,10 @@ Jangan pernah menggabungkan fastmode dengan nasihosting-extensionpack, kecuali m
 
 Keterangan untuk non fastmode
 ----------
-Non fastmode yaitu mode di mana semuanya semi manual hingga manual.
+Non fastmode yaitu mode di mana semuanya semi manual hingga manual, ditujukan untuk mengganti jumlah storage untuk user dan ingin mengganti alamat subdomain dengan domain.
 1. Di script ini default-nya membuat file ekstensi img 150 MB jika ingin mengubah, bisa edit scriptnya
-2. Saat masuk di /etc/fstab, masukkan : /mnt/namafile.img /home/sample ext4 loop 1 2 (namafile.img bisa diganti bebas namanya asal ada ekstensi img)
-3. Kata sample di atas bisa diganti dengan nama sub domain yang akan dibuat
-4. Di virtualhost ganti sample dengan melakukan find dan replace all dengan nama sub domain yang akan dibuat (Jika di linux pakai nano bisa menggunakan ctrl + backslash)
+2. Jika pakai domain, bukan subdomain maka di virtualhost ganti alamatnya dengan domain baru dengan melakukan find dan replace all dengan domain yang akan dibuat (Jika di linux pakai nano bisa menggunakan ctrl + backslash)
+
 
 Script ini telah diimplementasi
 -------------------------------
