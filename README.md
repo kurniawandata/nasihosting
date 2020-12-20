@@ -1,6 +1,6 @@
 # nasihosting
 
-Nasihosting v2.6
+Nasihosting v2.7
 --------------------
 ![alt text](http://xcode.or.id/04_small-logo.png)
 
@@ -38,9 +38,9 @@ Cara menggunakan
 
    ./fastmode-httponly.sh (Hanya mendukung http, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04, bisa custom nama user mysql dan database)
 
-   ./fastmode2.sh (Mendukung https tapi harus sudah mempunyai sertifikat SSL, bisa custom nama user mysql dan database)
+   ./fastmode2.sh (Mendukung https tapi harus sudah mempunyai sertifikat SSL, nama user dan database sama)
 
-   ./fastmode2-httponly.sh (Hanya mendukung http, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04, bisa custom nama user mysql dan database)
+   ./fastmode2-httponly.sh (Hanya mendukung http, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04, nama user dan database sama)
 
    Jika ada tambahan ubuntu20.04 pada nama file maka support untuk ubuntu 20.04
    
