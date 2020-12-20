@@ -26,7 +26,7 @@ Cara menggunakan
 3. chmod -R 777 *
 4. ./nasihosting.sh (Mendukung https tapi harus sudah mempunyai sertifikat SSL, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04)
 
-   ./nasihosting-http-only (Hanya mendukung http, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04) 
+   ./nasihosting-httponly (Hanya mendukung http, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04) 
    
    ./nasihosting-ubuntu20.04.sh (Mendukung https tapi harus sudah mempunyai sertifikat SSL, mendukung Ubuntu Server 20.04)
    
@@ -36,7 +36,7 @@ Cara menggunakan
 
    ./fastmode.sh (Mendukung https tapi harus sudah mempunyai sertifikat SSL, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04, bisa custom nama user mysql dan database tapi tidak aman jika digabung dengan nasihosting extension-pack)
 
-   ./fastmode-http.sh (Hanya mendukung http, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04, bisa custom nama user mysql dan database tapi tidak aman jika digabung dengan nasihosting extension-pack)
+   ./fastmode-httponly.sh (Hanya mendukung http, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04, bisa custom nama user mysql dan database tapi tidak aman jika digabung dengan nasihosting extension-pack)
 
    ./fastmode2.sh (Mendukung https tapi harus sudah mempunyai sertifikat SSL, bisa custom nama user mysql dan database dan aman jika digabung dengan nasihosting extension-pack) 
 
