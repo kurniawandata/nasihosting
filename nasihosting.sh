@@ -9,7 +9,7 @@ clear
 echo "=================================================================";
 echo " Nasihosting for Apache Server (Ubuntu Server)                   ";
 echo " Progammer : Kurniawan. xcode.or.id                              ";
-echo " Version 2.1 - 19/12/2020                                        ";
+echo " Version 2.2 - 20/12/2020                                        ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Instalasi                                                       ";
 echo " [1]  Install PHP 7.4, salin phpinfo.php ke /var/www/html dan    ";
@@ -80,7 +80,9 @@ case $choice in
     sudo cp /etc/apache2/apache2.conf backup
     sudo cp support/apache2.conf /etc/apache2/
     sudo apt-get install zip unzip php-zip
-    sudo nano support/subdomain.conf
+    echo -n "Masukkan nama domain : "
+    read domain
+    sed -i "s/nasihosting.com/$domain/g" support/subdomain.conf
     service apache2 restart
     ;;
 
