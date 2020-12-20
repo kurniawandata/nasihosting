@@ -234,9 +234,9 @@ case $choice in
     echo "Installasi virtualhost dengan domain"
     sudo cp support/subdomain.conf /etc/apache2/sites-available/$namasubdomain.conf
     sudo nano /etc/apache2/sites-available/$namasubdomain.conf
-    sudo a2ensite $namasubdomain.conf
     sudo nano /etc/apache2/ssl/nasihosting.com.pem
     sudo nano /etc/apache2/ssl/nasihosting.com.key
+    sudo a2ensite $namasubdomain.conf
     sudo service apache2 restart
     else
     echo "Sub domain yang anda masukkan sudah ada"
