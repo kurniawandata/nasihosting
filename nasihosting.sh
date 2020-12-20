@@ -60,7 +60,7 @@ case $choice in
     sudo cp support/phpinfo.php /var/www/html
     sudo a2enmod ssl
     sudo mkdir /etc/apache2/ssl
-    sudo chmod 777 /etc/pache2/ssl
+    sudo chmod 777 /etc/apache2/ssl
     sudo apt install mysql-server
     echo -n "Masukkan password root yang akan dibuat : "
     read passmysql
