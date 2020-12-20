@@ -8,7 +8,7 @@ Script untuk mendukung otomatisasi akun hosting dengan apache server di Ubuntu S
 
 Nasihosting ini menggunakan PHP 7.4
 -------------------------
-Semua instalasi sudah dilakukan otomatis dalam program.
+Semua instalasi sudah dilakukan otomatis dalam program, tapi untuk DNS managemen tetap dari luar panel domain atau cloudflare secara manual (aktivasi).
 
 File manager
 ------------
