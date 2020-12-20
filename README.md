@@ -34,13 +34,13 @@ Cara menggunakan
    
 5. Jalankan perintah 1,2,3 dan 15 lalu masuk ke fastmode atau install nasihosting-extensionpack jika ingin otomatis menambah pengguna hosting dari website dan storage-nya share.
 
-   ./fastmode.sh (Mendukung https tapi harus sudah mempunyai sertifikat SSL, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04, bisa custom nama user mysql dan database tapi tidak aman jika digabung dengan nasihosting extension-pack)
+   ./fastmode.sh (Mendukung https tapi harus sudah mempunyai sertifikat SSL, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04, bisa custom nama user mysql dan database)
 
-   ./fastmode-httponly.sh (Hanya mendukung http, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04, bisa custom nama user mysql dan database tapi tidak aman jika digabung dengan nasihosting extension-pack)
+   ./fastmode-httponly.sh (Hanya mendukung http, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04, bisa custom nama user mysql dan database)
 
-   ./fastmode2.sh (Mendukung https tapi harus sudah mempunyai sertifikat SSL, bisa custom nama user mysql dan database dan aman jika digabung dengan nasihosting extension-pack) 
+   ./fastmode2.sh (Mendukung https tapi harus sudah mempunyai sertifikat SSL, bisa custom nama user mysql dan database)
 
-   ./fastmode2-httponly.sh (Hanya mendukung http, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04, bisa custom nama user mysql dan database dan aman jika digabung dengan nasihosting extension-pack) 
+   ./fastmode2-httponly.sh (Hanya mendukung http, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04, bisa custom nama user mysql dan database)
 
    Jika ada tambahan ubuntu20.04 pada nama file maka support untuk ubuntu 20.04
    
