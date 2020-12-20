@@ -42,7 +42,7 @@ Cara menggunakan
 
    ./fastmode2-httponly.sh (Hanya mendukung http, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04, bisa custom nama user mysql dan database dan aman jika digabung dengan nasihosting extension-pack) 
 
-   Jika ada tambahan 20.04 pada nama file maka support untuk ubuntu 20.04
+   Jika ada tambahan ubuntu20.04 pada nama file maka support untuk ubuntu 20.04
    
 Kompatibilitas
 --------------
