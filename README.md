@@ -1,6 +1,6 @@
 # nasihosting
 
-Nasihosting v2.7
+Nasihosting v2.7.1
 --------------------
 ![alt text](http://xcode.or.id/04_small-logo.png)
 
@@ -43,7 +43,11 @@ Cara menggunakan
    ./fastmode2-httponly.sh (Hanya mendukung http, mendukung Ubuntu Server 16.04 dan Ubuntu 18.04, nama user dan database sama)
 
    Jika ada tambahan ubuntu20.04 pada nama file maka support untuk ubuntu 20.04
-   
+
+Ganti domain
+------------
+./gantidomain.sh
+
 Kompatibilitas
 --------------
 Nasihosting-extensionpack tidak mendukung MySQL Server dari Ubuntu Server 20.04 sehingga pilihan distro linux terbaik untuk nasihosting adalah Ubuntu Server 18.04.5 atau Ubuntu Server 16.04.7, karena support nasihosting-extensionpack.
