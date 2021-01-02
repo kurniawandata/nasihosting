@@ -46,7 +46,8 @@ Cara menggunakan
 
 Ganti domain
 ------------
-./gantidomain.sh
+   ./gantidomain.sh (Mendukung https)
+   ./gantidomain-httponly.sh (Hanya mendukung http)
 
 Kompatibilitas
 --------------
