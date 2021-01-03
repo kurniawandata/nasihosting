@@ -44,7 +44,7 @@ Cara menggunakan
 
    Jika ada tambahan ubuntu20.04 pada nama file maka support untuk ubuntu 20.04
 
-Ganti domain
+Ganti domain utama
 ------------
    ./gantidomain.sh (Mendukung https)
    
