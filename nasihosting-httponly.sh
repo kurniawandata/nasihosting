@@ -9,12 +9,12 @@ clear
 echo "=================================================================";
 echo " Nasihosting for Apache Server (Ubuntu Server) - http only       ";
 echo " Progammer : Kurniawan. xcode.or.id                              ";
-echo " Version 2.7 - 21/12/2020                                        ";
+echo " Version 3.0 - 06/02/2020                                        ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Instalasi                                                       ";
-echo " [1]  Install PHP 7.4, salin phpinfo.php ke /var/www/html dan    ";
+echo " [1]  Install PHP 8.0, salin phpinfo.php ke /var/www/html dan    ";
 echo "      install MySQL Server                                       ";
-echo " [2]  Install phpmyadmin 5.0.4 (Kompatible dengan PHP 7.4)       ";
+echo " [2]  Install phpmyadmin 5.0.4 (Kompatible dengan PHP 8.0)       ";
 echo " [3]  Aktifkan /home untuk virtualhost client, zip unzip php-zip ";
 echo "      dan ganti domain nasihosting.com                           ";
 echo " [4]  Lihat daftar file img di /mnt                              ";
@@ -56,7 +56,7 @@ case $choice in
     sudo apt -y install software-properties-common
     sudo add-apt-repository ppa:ondrej/php 
     sudo apt-get update
-    sudo apt -y install php7.4
+    sudo apt -y install php8.0 libapache2-mod-php8.0
     sudo cp support/phpinfo.php /var/www/html
     sudo apt install mysql-server
     echo -n "Masukkan password root yang akan dibuat : "
