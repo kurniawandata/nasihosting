@@ -9,7 +9,7 @@ clear
 echo "=================================================================";
 echo " Nasihosting for Apache Server (Ubuntu Server) - http only       ";
 echo " Progammer : Kurniawan. xcode.or.id                              ";
-echo " Version 3.0 - 06/02/2020                                        ";
+echo " Version 3.1 - 06/02/2020                                        ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Instalasi                                                       ";
 echo " [1]  Install PHP 8.0, salin phpinfo.php ke /var/www/html dan    ";
@@ -30,9 +30,9 @@ echo " [12] Umount file img dan edit /etc/fstab                        ";
 echo " [13] Hapus data file img                                        ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Aktifkan pengamanan dari remote shell PHP Shell                 ";
-echo " [14] Cek php.ini di PHP 7.4 (/etc/apache2/php7.4/apache/php.ini)";
-echo " [15] Amankan dari PHP Shell(/etc/apache2/php7.4/apache/php.ini) ";
-echo " [16] Edit php.ini (/etc/apache2/php7.4/apache/php.ini)          ";
+echo " [14] Cek php.ini di PHP 8.0 (/etc/apache2/php8.0/apache/php.ini)";
+echo " [15] Amankan dari PHP Shell(/etc/apache2/php8.0/apache/php.ini) ";
+echo " [16] Edit php.ini (/etc/apache2/php8.0/apache/php.ini)          ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Virtualhost                                                     ";
 echo " [17] Cek file virtualhost                                       ";
@@ -187,31 +187,31 @@ case $choice in
     fi
     ;;
 
-14) if [ -z "$(ls -l /etc/php/7.4/apache2/php.ini)" ]; then
-    echo "File php.ini tidak ada di /etc/php/7.4/apache2/php.ini"
+14) if [ -z "$(ls -l /etc/php/8.0/apache2/php.ini)" ]; then
+    echo "File php.ini tidak ada di /etc/php/8.0/apache2/php.ini"
     else
-    echo "File php.ini ada di /etc/php/7.4/apache2/php.ini" 
+    echo "File php.ini ada di /etc/php/8.0/apache2/php.ini" 
     fi
     ;;
 
-15) read -p "Apakah anda yakin menggunakan apache server dengan PHP 7.4? y/n :" -n 1 -r
+15) read -p "Apakah anda yakin menggunakan apache server dengan PHP 8.0? y/n :" -n 1 -r
     echo  ""
     if [[ ! $REPLY =~ ^[Nn]$ ]]
     then
-    if [ -z "$(ls -l /etc/php/7.4/apache2/php.ini)" ]; then
-    echo "File php.ini tidak ada di /etc/php/7.4/apache2/php.ini"
+    if [ -z "$(ls -l /etc/php/8.0/apache2/php.ini)" ]; then
+    echo "File php.ini tidak ada di /etc/php/8.0/apache2/php.ini"
     else
-    sudo cp /etc/php/7.4/apache2/php.ini /etc/php/7.4/apache2/phpini.backup
-    sudo cp support/php.ini /etc/php/7.4/apache2
+    sudo cp /etc/php/8.0/apache2/php.ini /etc/php/8.0/apache2/phpini.backup
+    sudo cp support/php.ini /etc/php/8.0/apache2
     sudo service apache2 restart
     fi
     fi
     ;;
 
-16) if [ -z "$(ls -l /etc/php/7.4/apache2/php.ini)" ]; then
-    echo "File php.ini tidak ada di /etc/php/7.4/apache2/php.ini"
+16) if [ -z "$(ls -l /etc/php/8.0/apache2/php.ini)" ]; then
+    echo "File php.ini tidak ada di /etc/php/8.0/apache2/php.ini"
     else
-    sudo nano /etc/php/7.4/apache2/php.ini
+    sudo nano /etc/php/8.0/apache2/php.ini
     fi
     ;;
 
