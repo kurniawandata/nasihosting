@@ -1,12 +1,12 @@
 # nasihosting
 
-Nasihosting v2.7.2
+Nasihosting v3.0
 --------------------
 ![alt text](http://xcode.or.id/04_small-logo.png)
 
 Script untuk mendukung otomatisasi akun hosting dengan apache server di Ubuntu Server
 
-Nasihosting ini menggunakan PHP 7.4
+Nasihosting ini menggunakan PHP 8.0
 -------------------------
 Semua instalasi sudah dilakukan otomatis dalam program, tapi untuk DNS managemen tetap dari luar. (aktivasi).
 
