@@ -74,7 +74,7 @@ GNU General Public License v3
 
 Program ini dibuat oleh :
 --------------------------------------------
-Kurniawan. kurniawan@xcodetraining.com.
+Kurniawan. E-mail : kurniawan@securityhub.id
 xcode.or.id
 
 
