@@ -282,7 +282,7 @@ case $choice in
 esac
 echo ""
 echo "Nasihosting for apache server (Ubuntu Server)"
-echo "Oleh Kurniawan. xcode.or.id. E-mail : kurniawan@securityhub.id"
+echo "Oleh Kurniawan. xcode.or.id. E-mail : kurniawanajazenfone@gmail.com"
 echo ""
 echo -n "Kembali ke menu? [y/n]: ";
 read again;
