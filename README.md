@@ -6,6 +6,10 @@ Nasihosting v3.2
 
 Script untuk mendukung otomatisasi akun hosting dengan apache server di Ubuntu Server
 
+Support
+-------
+Nasihosting di bawah versi 3.2 dihentikan supportnya
+
 Nasihosting ini menggunakan PHP 8.0
 -------------------------
 Semua instalasi sudah dilakukan otomatis dalam program, tapi untuk DNS managemen tetap dari luar. (aktivasi).
@@ -50,7 +54,7 @@ Ganti domain utama
    
    ./gantidomain-httponly.sh (Hanya mendukung http)
 
-Kompatibilitas
+Kompatibilitas 
 --------------
 Nasihosting-extensionpack tidak mendukung MySQL Server dari Ubuntu Server 20.04 sehingga pilihan distro linux terbaik untuk nasihosting adalah Ubuntu Server 18.04.5 atau Ubuntu Server 16.04.7, karena support nasihosting-extensionpack.
 
