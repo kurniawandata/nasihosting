@@ -6,9 +6,9 @@ Nasihosting v3.2
 
 Script untuk mendukung otomatisasi akun hosting dengan apache server di Ubuntu Server
 
-Support
+Rekomendasi
 -------
-Nasihosting di bawah versi 3.2 dihentikan supportnya
+Kami merekomendasikan Ubuntu Server 18.04 untuk nasihosting
 
 Nasihosting ini menggunakan PHP 8.0
 -------------------------
