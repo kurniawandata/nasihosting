@@ -3,7 +3,7 @@
 #Program ini dapat digunakan untuk personal ataupun komersial.
 #X-code Media - xcode.or.id / xcodetraining.com
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
-echo "Nasihosting [Fast mode] - v1.6         "
+echo "Nasihosting [Fast mode] - v1.7         "
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
 sudo ls -l /mnt/*
 echo -n "Masukkan nama file img - Jangan lupa tambahkan ekstensi img, misal akun1.img : "
@@ -42,6 +42,8 @@ echo -n "Masukkan nama database yang akan dibuat untuk user yang akan dibuat : "
 read namadatabase
 sudo mysql -uroot -p$passmysql -e "CREATE USER '$namauser'@'localhost' IDENTIFIED BY '$passdb';"
 sudo mysql -uroot -p$passmysql -e "GRANT ALL PRIVILEGES ON $namadatabase.* TO '$namauser'@'localhost' WITH GRANT OPTION;"
+sudo mkdir /home/$namadatabase
+sudo touch /home/$namadatabase/locked
 sudo clear
 else
 echo "File img sudah ada"
