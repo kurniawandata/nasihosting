@@ -88,12 +88,12 @@ Jika ingin donasi untuk Kurniawan
 
 Gopay :
 
-![alt text](http://xcodeserver.my.id/gofood.png)
+![alt text](https://kurniawan.xcode.or.id/gofood.png)
 
-![alt text](http://xcodeserver.my.id/gopay.png)
+![alt text](https://kurniawan.xcode.or.id/gopay.png)
 
 Ovo :
 
-![alt text](http://xcodeserver.my.id/ovo3.png)
+![alt text](https://kurniawan.xcode.or.id/ovo3.png)
 
-![alt text](http://xcodeserver.my.id/ovo2.png)
+![alt text](https://kurniawan.xcode.or.id/ovo2.png)
