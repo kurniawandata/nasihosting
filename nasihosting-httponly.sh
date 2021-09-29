@@ -9,7 +9,7 @@ clear
 echo "=================================================================";
 echo " Nasihosting for Apache Server (Ubuntu Server) - http only       ";
 echo " Progammer : Kurniawan. xcode.or.id                              ";
-echo " Version 3.1 - 06/02/2020                                        ";
+echo " Version 5.0 - 29/09/2020                                        ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Instalasi                                                       ";
 echo " [1]  Install PHP 8.0, salin phpinfo.php ke /var/www/html dan    ";
