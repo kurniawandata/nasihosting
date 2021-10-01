@@ -9,7 +9,7 @@ clear
 echo "=================================================================";
 echo " Nasihosting for Apache Server (Ubuntu Server)                   ";
 echo " Progammer : Kurniawan. xcode.or.id                              ";
-echo " Version 5.1 - 01/10/2021                                        ";
+echo " Version 5.0 - 01/10/2021                                        ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Instalasi                                                       ";
 echo " [1]  Install PHP 8.0, salin phpinfo.php ke /var/www/html dan    ";
@@ -70,7 +70,7 @@ case $choice in
 2) sudo apt install phpmyadmin
     sudo mv /usr/share/phpmyadmin/ /usr/share/phpmyadmin.bak
     sudo mkdir /usr/share/phpmyadmin/
-    sudo wget https://distrolinux.xcode.or.id/phpMyAdmin-5.1.11-all-languages.tar.gz
+    sudo wget https://files.phpmyadmin.net/phpMyAdmin/5.0.4/phpMyAdmin-5.0.4-all-languages.tar.gz
     sudo tar xzf phpMyAdmin-5.1.11-all-languages.tar.gz
     sudo mv phpMyAdmin-5.1.11-all-languages/* /usr/share/phpmyadmin
     cp support/vendor_config.php /usr/share/phpmyadmin/libraries/
