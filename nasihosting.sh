@@ -71,8 +71,8 @@ case $choice in
     sudo mv /usr/share/phpmyadmin/ /usr/share/phpmyadmin.bak
     sudo mkdir /usr/share/phpmyadmin/
     sudo wget https://files.phpmyadmin.net/phpMyAdmin/5.0.4/phpMyAdmin-5.0.4-all-languages.tar.gz
-    sudo tar xzf phpMyAdmin-5.1.11-all-languages.tar.gz
-    sudo mv phpMyAdmin-5.1.11-all-languages/* /usr/share/phpmyadmin
+    sudo tar xzf phpMyAdmin-5.0.4-all-languages.tar.gz
+    sudo mv phpMyAdmin-5.0.4-all-languages/* /usr/share/phpmyadmin
     cp support/vendor_config.php /usr/share/phpmyadmin/libraries/
     ;;
 
