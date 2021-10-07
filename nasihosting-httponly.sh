@@ -9,7 +9,7 @@ clear
 echo "=================================================================";
 echo " Nasihosting for Apache Server (Ubuntu Server) - http only       ";
 echo " Progammer : Kurniawan. xcode.or.id                              ";
-echo " Version 5.0 - 29/09/2020                                        ";
+echo " Version 5.1 - 07/10/2020                                        ";
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=";
 echo " Instalasi                                                       ";
 echo " [1]  Install PHP 8.0, salin phpinfo.php ke /var/www/html dan    ";
@@ -70,10 +70,9 @@ case $choice in
 2) sudo apt install phpmyadmin
     sudo mv /usr/share/phpmyadmin/ /usr/share/phpmyadmin.bak
     sudo mkdir /usr/share/phpmyadmin/
-    sudo wget https://files.phpmyadmin.net/phpMyAdmin/5.0.4/phpMyAdmin-5.0.4-all-languages.tar.gz
-    sudo tar xzf phpMyAdmin-5.0.4-all-languages.tar.gz
-    sudo mv phpMyAdmin-5.0.4-all-languages/* /usr/share/phpmyadmin
-    cp support/vendor_config.php /usr/share/phpmyadmin/libraries/
+    sudo wget https://xcode.or.id/phpMyAdmin-5.1.1-all-languages.tar.gz
+    sudo tar xzf phpMyAdmin-5.1.1-all-languages.tar.gz
+    sudo mv phpMyAdmin-5.1.1-all-languages/* /usr/share/phpmyadmin
     ;;
 
 3)  echo "Aktifkan /home.."
