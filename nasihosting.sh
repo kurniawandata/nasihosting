@@ -72,7 +72,7 @@ case $choice in
     sudo mkdir /usr/share/phpmyadmin/
     sudo wget https://xcode.or.id/phpMyAdmin-5.1.1-all-languages.tar.gz
     sudo tar xzf phpMyAdmin-5.1.1-all-languages.tar.gz
-    sudo cp phpMyAdmin-5.1.1-all-languages/* /usr/share/phpmyadmin
+    sudo mv phpMyAdmin-5.1.1-all-languages/* /usr/share/phpmyadmin
     ;;
 
 3)  echo "Aktifkan /home.."
